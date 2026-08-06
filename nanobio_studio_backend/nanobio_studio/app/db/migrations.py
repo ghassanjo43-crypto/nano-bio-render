@@ -1,4 +1,4 @@
-"""Additive schema migrations for existing development databases.
+﻿"""Additive schema migrations for existing development databases.
 
 Why this exists
 ---------------
@@ -10,14 +10,14 @@ new column, and then fail with an opaque ``no such column`` error.
 This module adds missing columns in place, idempotently, at startup. It is a
 **deliberate interim measure**, not a replacement for Alembic:
 
-* it only ever ADDS nullable or defaulted columns — it never drops, renames or
+* it only ever ADDS nullable or defaulted columns â€” it never drops, renames or
   retypes anything, so it cannot destroy data;
 * it is idempotent, so running it repeatedly is safe;
 * it records nothing and has no down-migration.
 
 Proper Alembic migrations remain a prerequisite for production, and are tracked
 as a known limitation in the workspace documentation. The honest reason this
-exists is that the alternative — silently broken developer databases — is worse.
+exists is that the alternative â€” silently broken developer databases â€” is worse.
 """
 
 from __future__ import annotations
@@ -33,12 +33,12 @@ __all__ = ["ADDITIVE_COLUMNS", "EXPECTED_TABLES", "REPAIRS",
            "tables_awaiting_creation"]
 
 #: Tables introduced after the first release. `create_all` builds any missing
-#: table, so these need no ALTER — they are listed so startup can report which
+#: table, so these need no ALTER â€” they are listed so startup can report which
 #: ones an upgrade is about to add, and so a test can assert they exist.
 EXPECTED_TABLES: tuple[str, ...] = (
     "science_data_records",
     "science_readiness_snapshots",
-    # Phase 2, Milestone 1 — the Experimental Validation Registry.
+    # Phase 2, Milestone 1 â€” the Experimental Validation Registry.
     #
     # All new tables, no ALTER on any Phase 1 table: an upgraded installation
     # keeps every project, study, candidate and account exactly as it was, and
@@ -51,7 +51,7 @@ EXPECTED_TABLES: tuple[str, ...] = (
     "validation_attachments",
     "validation_audit_log",
     "validation_contradiction_resolutions",
-    # Phase 2, Production Hardening — organizations and workspace isolation.
+    # Phase 2, Production Hardening â€” organizations and workspace isolation.
     #
     # Again all new tables. The ALTERs that accompany them are in
     # ORGANIZATION_COLUMNS below and add one nullable column per table, so an
@@ -62,18 +62,18 @@ EXPECTED_TABLES: tuple[str, ...] = (
     "organization_audit_log",
     "notifications",
     "notification_audit_log",
-    # Phase 2, Production Hardening — organization management.
+    # Phase 2, Production Hardening â€” organization management.
     #
     # Invitations are a new table rather than a new membership status, so an
     # installation that never issues one is completely unaffected: no existing
     # row changes, and no access query reads it.
     "organization_invitations",
-    # Phase 2, Production Hardening — account and session hardening.
+    # Phase 2, Production Hardening â€” account and session hardening.
     #
     # A new table for activation and reset tokens. Nothing existing changes
     # shape; an installation that never issues one is unaffected.
     "auth_account_tokens",
-    # Phase 2, Candidate Revision and Supersession — records that depend on an
+    # Phase 2, Candidate Revision and Supersession â€” records that depend on an
     # exact candidate version.
     #
     # All new tables again. Each carries a NOT NULL candidate_version_id, which
@@ -135,7 +135,7 @@ class AddColumn:
 # SQLAlchemy's ``Enum(..., native_enum=False)`` persists the enum **member
 # name**, not its value: a ``RecordOrigin.DEMO`` row holds the string 'DEMO',
 # not 'demo'. Raw SQL written against the values therefore matches nothing and
-# fails silently — which is exactly what an earlier version of this table did,
+# fails silently â€” which is exactly what an earlier version of this table did,
 # leaving demonstration runs backfilled as research designs.
 #
 # So every literal below is a member NAME, and the origin comparison accepts
@@ -162,8 +162,8 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
               ddl="VARCHAR(80) NULL"),
     AddColumn(
         table="workspace_runs", column="inputs_are_synthetic",
-        ddl="BOOLEAN NOT NULL DEFAULT 0",
-        backfill=("UPDATE workspace_runs SET inputs_are_synthetic = 1 "
+        ddl="BOOLEAN NOT NULL DEFAULT FALSE",
+        backfill=("UPDATE workspace_runs SET inputs_are_synthetic = TRUE "
                   f"WHERE {_IS_DEMO}"),
     ),
     AddColumn(table="workspace_runs", column="report_assessment_id",
@@ -172,7 +172,7 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
     #:
     #: Nullable, and without a foreign key in the DDL, on purpose. SQLite
     #: cannot add a NOT NULL column to a populated table without a default,
-    #: and no default is correct here — the right organization is whichever
+    #: and no default is correct here â€” the right organization is whichever
     #: one the backfill works out from the record's parent. So the column
     #: arrives empty, ``backfill_organizations()`` fills it, and
     #: ``check_organization_consistency()` verifies the result. A row that
@@ -204,7 +204,7 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
     # a restatement of what those rows already were, not a guess: before this
     # column existed, a row's presence *was* the claim that the object was
     # there. The backfill for `storage_backend` says 'local' for the same
-    # reason — it is the only driver that could have written them.
+    # reason â€” it is the only driver that could have written them.
     AddColumn(
         table="validation_attachments", column="state",
         ddl="VARCHAR(24) NOT NULL DEFAULT 'AVAILABLE'"),
@@ -228,28 +228,28 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
     #
     # Every existing account was usable and had a password, so ACTIVE is a
     # restatement of what those rows already were, not a guess. Defaulting to
-    # PENDING_ACTIVATION would lock out every existing user on upgrade — the
+    # PENDING_ACTIVATION would lock out every existing user on upgrade â€” the
     # exact outcome the rehash-on-login migration exists to avoid.
     AddColumn(table="auth_users", column="state",
               ddl="VARCHAR(32) NOT NULL DEFAULT 'ACTIVE'",
               # An account already disabled stays disabled. Reading the old
               # boolean is the only honest source for this.
               backfill=("UPDATE auth_users SET state = 'DISABLED' "
-                        "WHERE is_active = 0")),
+                        "WHERE is_active IS FALSE")),
     AddColumn(table="auth_users", column="state_changed_at",
               ddl="TIMESTAMP NULL"),
     AddColumn(table="auth_users", column="state_reason",
               ddl="VARCHAR(500) NULL"),
     # Left NULL rather than guessed at. Every existing hash is bcrypt, but
     # `needs_rehash` reads the hash prefix, so it does not need this to be
-    # right — and writing 'bcrypt' onto a row whose hash somebody had already
+    # right â€” and writing 'bcrypt' onto a row whose hash somebody had already
     # migrated by hand would be asserting something the migration cannot know.
     AddColumn(table="auth_users", column="password_algorithm",
               ddl="VARCHAR(32) NULL"),
     AddColumn(table="auth_users", column="password_changed_at",
               ddl="TIMESTAMP NULL"),
     AddColumn(table="auth_users", column="must_set_password",
-              ddl="BOOLEAN NOT NULL DEFAULT 0"),
+              ddl="BOOLEAN NOT NULL DEFAULT FALSE"),
 
     # Session columns. All nullable: an existing session keeps working and
     # simply has no handle until it is replaced, which happens within the
@@ -268,7 +268,7 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
     # something new:
     #
     #   * every existing version is its candidate's history, so it becomes
-    #     DRAFT only if nothing depends on it — that decision needs a join
+    #     DRAFT only if nothing depends on it â€” that decision needs a join
     #     and is made by the dedicated migration in `candidate_versioning.py`,
     #     not by a blanket UPDATE here;
     #   * `revision_label` is a restatement of `version_number`;
@@ -323,8 +323,8 @@ ADDITIVE_COLUMNS: tuple[AddColumn, ...] = (
     # Exact-version binding for records that already existed.
     #
     # `validation_attachments.candidate_version_id` arrives NULL rather than
-    # backfilled here. The value is reachable — every attachment hangs off an
-    # experiment version which names its candidate version — but a two-table
+    # backfilled here. The value is reachable â€” every attachment hangs off an
+    # experiment version which names its candidate version â€” but a two-table
     # UPDATE that silently guesses on a mismatch is exactly what the legacy
     # migration exists to avoid doing. `legacy_candidate_migration` binds them,
     # reports the count, and refuses rather than guessing where the join is
@@ -355,8 +355,8 @@ REPAIRS: tuple[tuple[str, str], ...] = (
      f"UPDATE workspace_runs SET pathway = 'DEMO_SCENARIO' WHERE {_IS_DEMO} "
      "AND pathway <> 'DEMO_SCENARIO'"),
     ("workspace_runs",
-     f"UPDATE workspace_runs SET inputs_are_synthetic = 1 WHERE {_IS_DEMO} "
-     "AND inputs_are_synthetic = 0"),
+     f"UPDATE workspace_runs SET inputs_are_synthetic = TRUE WHERE {_IS_DEMO} "
+     "AND inputs_are_synthetic IS FALSE"),
 )
 
 
@@ -410,7 +410,7 @@ async def apply_additive_migrations(engine: AsyncEngine) -> list[str]:
 #: written out here. Restating them by hand is how this check silently stopped
 #: checking anything: an earlier draft guessed ``experiment_version_id`` where
 #: the column is actually ``version_id``, and a mistyped column in a
-#: consistency query fails loudly only if something runs it — otherwise it sits
+#: consistency query fails loudly only if something runs it â€” otherwise it sits
 #: there asserting nothing.
 _PARENT_OF: dict[str, str] = {
     "workspace_runs": "workspace_projects",
@@ -432,14 +432,14 @@ _PARENT_OF: dict[str, str] = {
     # version foreign keys and `_parent_join` resolves the first it finds,
     # which would check one side and silently ignore the other. Its
     # organization is taken from the left version at write time, and both
-    # sides are required to share a candidate — which shares an organization.
+    # sides are required to share a candidate â€” which shares an organization.
     # A report document must never disagree with its assessment about which
     # organization owns it: the document is the patient's file, and the
     # assessment is what every scoped query resolves first.
     "report_documents": "report_assessments",
     # ``report_audit_log`` is deliberately absent. Its ``assessment_id`` is not
-    # a foreign key — the trail has to outlive the assessment it describes,
-    # which is the entire point of auditing a deletion — so there is no join to
+    # a foreign key â€” the trail has to outlive the assessment it describes,
+    # which is the entire point of auditing a deletion â€” so there is no join to
     # verify. Its organization is captured from the assessment at write time,
     # including in ``delete_assessment``, which reads it before the row goes.
 }
@@ -467,7 +467,7 @@ async def create_organization_indexes(engine: AsyncEngine) -> list[str]:
     """Index every ``organization_id``, idempotently.
 
     ``create_all`` adds indexes only alongside the tables it creates, so an
-    upgraded database would get the columns without them — and every list,
+    upgraded database would get the columns without them â€” and every list,
     filter and dashboard query is about to acquire an organization predicate.
     An unindexed predicate on a table of any size turns each of those into a
     full scan, which is how an authorization change becomes a performance
@@ -501,7 +501,7 @@ async def check_organization_consistency(
 
     The price of denormalising ``organization_id`` onto every table is that it
     *can* disagree with the record's parent. The service layer is what stops
-    that happening; this is what proves it did. Returns a table → count map,
+    that happening; this is what proves it did. Returns a table â†’ count map,
     empty when everything is consistent.
     """
     problems: dict[str, int] = {}
@@ -540,7 +540,7 @@ async def check_organization_consistency(
 async def tables_awaiting_creation(engine: AsyncEngine) -> list[str]:
     """Which newer tables are missing from an *existing* database.
 
-    Purely an observation — it creates nothing. ``create_all`` does that, so
+    Purely an observation â€” it creates nothing. ``create_all`` does that, so
     this must be called before it if the answer is to be meaningful.
 
     Separate from :func:`apply_additive_migrations` on purpose. That function
@@ -559,3 +559,4 @@ async def tables_awaiting_creation(engine: AsyncEngine) -> list[str]:
             return []
         return [t for t in EXPECTED_TABLES
                 if not await _existing_columns(conn, t)]
+
