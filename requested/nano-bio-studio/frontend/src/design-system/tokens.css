@@ -1,0 +1,173 @@
+/**
+ * NanoBio Studio — design tokens.
+ *
+ * One source of truth for colour, type, space, radius, elevation and motion.
+ * Components consume these variables only; no component hard-codes a hex value.
+ *
+ * Palette rationale: a deep navy/indigo foundation (authority, laboratory
+ * instrumentation) with a restrained teal-cyan accent (biological, aqueous).
+ * Accents are used sparingly so scientific data, not chrome, carries the eye.
+ */
+
+:root {
+  /* ---------------------------------------------------------------- brand */
+  --navy-900: #071a2b;
+  --navy-800: #0b2338;
+  --navy-700: #103049;
+  --navy-600: #16405f;
+  --navy-500: #1d5075;
+
+  --indigo-700: #23407a;
+  --indigo-600: #2f549b;
+
+  --teal-700: #0a6c82;
+  --teal-600: #0d8ba6;
+  --teal-500: #12a5c4;
+  --teal-400: #35bcd8;
+  --teal-300: #7ad4e8;
+  --teal-100: #d6f1f8;
+  --teal-50: #eef9fc;
+
+  --accent: var(--teal-600);
+  --accent-strong: var(--teal-700);
+  --accent-soft: var(--teal-50);
+
+  /* ------------------------------------------------------------- neutrals */
+  --ink-900: #0d1b26;
+  --ink-800: #162734;
+  --ink-700: #1f3242;
+  --ink-600: #3d5468;
+  --ink-500: #5c7488;
+  --ink-400: #8199ab;
+  --ink-300: #b3c4d0;
+  --ink-200: #d5dfe7;
+  --ink-100: #e8eef3;
+  --ink-50: #f4f7fa;
+  --white: #ffffff;
+
+  /* ------------------------------------------------------------- surfaces */
+  --bg-app: #f2f6f9;
+  --bg-subtle: var(--ink-50);
+  --surface: var(--white);
+  --surface-raised: var(--white);
+  --surface-sunken: #eff4f8;
+  --surface-inverse: var(--navy-800);
+
+  --border: var(--ink-200);
+  --border-strong: var(--ink-300);
+  --border-subtle: var(--ink-100);
+
+  /* ------------------------------------------------------------ semantics */
+  --success-700: #14663a;
+  --success-600: #1a7d47;
+  --success-100: #e4f5ea;
+  --success-border: #a5d8ba;
+
+  --warn-700: #7a5600;
+  --warn-600: #9a6d00;
+  --warn-100: #fdf4dd;
+  --warn-border: #e8c877;
+
+  --danger-700: #8c1f26;
+  --danger-600: #a92b33;
+  --danger-100: #fdecee;
+  --danger-border: #eeafb4;
+
+  --info-700: #1a4f7a;
+  --info-600: #22689e;
+  --info-100: #e6f1fa;
+  --info-border: #a8cbe6;
+
+  /* ---------------------------------------------------------- typography */
+  --font-sans: "Inter", "Segoe UI Variable", "Segoe UI", system-ui,
+    -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Mono", Consolas, "SF Mono", monospace;
+
+  --text-2xs: 0.6875rem;  /* 11px — badges, dense meta */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.8125rem;   /* 13px */
+  --text-base: 0.875rem;  /* 14px — body default for dense UI */
+  --text-md: 0.9375rem;   /* 15px */
+  --text-lg: 1.0625rem;   /* 17px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.5rem;     /* 40px — hero numerals */
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.25;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+
+  --tracking-tight: -0.015em;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.07em;
+
+  /* -------------------------------------------------------------- spacing */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+
+  /* --------------------------------------------------------------- radius */
+  --radius-xs: 3px;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* ------------------------------------------------------------ elevation */
+  /* Low, tight shadows. Scientific tools should read as precise, not soft. */
+  --shadow-xs: 0 1px 2px rgba(13, 27, 38, 0.06);
+  --shadow-sm: 0 1px 3px rgba(13, 27, 38, 0.08), 0 1px 2px rgba(13, 27, 38, 0.04);
+  --shadow-md: 0 4px 12px rgba(13, 27, 38, 0.09), 0 1px 3px rgba(13, 27, 38, 0.05);
+  --shadow-lg: 0 12px 28px rgba(13, 27, 38, 0.14), 0 2px 6px rgba(13, 27, 38, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(18, 165, 196, 0.32);
+
+  /* --------------------------------------------------------------- motion */
+  --ease: cubic-bezier(0.32, 0.72, 0.35, 1);
+  --dur-fast: 110ms;
+  --dur: 180ms;
+  --dur-slow: 280ms;
+
+  /* --------------------------------------------------------------- layout */
+  --sidebar-w: 258px;
+  --sidebar-w-collapsed: 64px;
+  --header-h: 60px;
+  --content-max: 1560px;
+
+  --z-header: 40;
+  --z-sidebar: 45;
+  --z-overlay: 60;
+  --z-dropdown: 70;
+  --z-toast: 80;
+}
+
+/* Respect the user's motion preference throughout. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

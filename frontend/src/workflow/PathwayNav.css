@@ -1,0 +1,141 @@
+/* Pathway navigation, progress and the study/candidate banner. */
+
+/* ---------------------------------------------------------------- banner */
+.pwbanner {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.22));
+  border-radius: 10px;
+  background: var(--surface-raised, rgba(148, 163, 184, 0.06));
+}
+
+.pwbanner__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.pwbanner__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+}
+.pwbanner__facts dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #94a3b8);
+}
+.pwbanner__facts dd {
+  margin: 2px 0 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.pwbanner__next {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* -------------------------------------------------------------- progress */
+.pwprog { display: grid; gap: 6px; margin-bottom: 14px; }
+
+.pwprog__head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  color: var(--text-muted, #94a3b8);
+}
+.pwprog__percent { font-variant-numeric: tabular-nums; }
+
+.pwprog__bar {
+  height: 5px;
+  border-radius: 3px;
+  background: var(--border-subtle, rgba(148, 163, 184, 0.2));
+  overflow: hidden;
+}
+.pwprog__fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--tone-accent, #a78bfa);
+}
+
+.pwprog__steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.pwprog__steps button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted, #94a3b8);
+}
+.pwprog__steps button:hover {
+  border-color: var(--border-subtle, rgba(148, 163, 184, 0.35));
+}
+.pwprog__step.is-done button { color: var(--tone-success, #4ade80); }
+.pwprog__step.is-current button {
+  color: var(--text-strong, #e2e8f0);
+  border-color: var(--tone-accent, #a78bfa);
+  font-weight: 600;
+}
+
+.pwprog__note {
+  margin: 2px 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* ------------------------------------------------------------- controls */
+.pwnav {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.2));
+}
+
+.pwnav__next { display: grid; gap: 2px; font-size: 0.82rem; }
+.pwnav__nextlabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #94a3b8);
+}
+.pwnav__nextsummary { color: var(--text-muted, #94a3b8); font-size: 0.78rem; }
+
+.pwnav__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pwnav__right { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.pwnav__hint {
+  margin-left: 8px;
+  font-size: 0.74rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+.pwnav__saved { margin: 0; font-size: 0.78rem; color: var(--tone-success, #4ade80); }
+
+.pwnav__modalactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}

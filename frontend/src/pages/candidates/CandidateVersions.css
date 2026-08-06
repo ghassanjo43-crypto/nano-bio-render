@@ -1,0 +1,291 @@
+/*
+ * Candidate version history, comparison and supersession.
+ *
+ * Narrow first. Every rule below is written for a 390 px viewport and widened
+ * by one media query, because the failure this avoids is not "it looks cramped
+ * on a phone" — it is a comparison table pushing the page sideways so the
+ * reason column sits off-screen, on the one screen where the reader most needs
+ * to see what changed.
+ *
+ * Wide content is confined: the comparison table scrolls inside its own
+ * container (`.cv__tablewrap`), never the page body. Long unbroken strings —
+ * checksums, field names — wrap or ellipsise rather than setting a minimum
+ * width the layout then has to honour.
+ */
+
+.cv {
+  display: grid;
+  gap: 16px;
+  /* The page itself never scrolls sideways. */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.cv__layout {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .cv__layout {
+    grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.cv__heading {
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+}
+
+.cv__subheading {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #94a3b8);
+  margin: 14px 0 6px;
+}
+
+.cv__note {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* --- named standings ---------------------------------------------------- */
+
+.cv__standings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .cv__standings {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+}
+
+.cv__standing {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.22));
+  border-radius: 10px;
+}
+
+.cv__standing dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #94a3b8);
+}
+
+.cv__standing dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+  /* A long label must wrap rather than widen the grid track. */
+  overflow-wrap: anywhere;
+}
+
+.cv__standingnote {
+  margin: 6px 0 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* --- the history list --------------------------------------------------- */
+
+.cv__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cv__row {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.22));
+  border-radius: 10px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.cv__row:hover,
+.cv__row:focus-visible {
+  border-color: var(--tone-accent, #a78bfa);
+}
+
+.cv__row--selected {
+  border-color: var(--tone-accent, #a78bfa);
+  box-shadow: inset 0 0 0 1px var(--tone-accent, #a78bfa);
+}
+
+.cv__rowhead,
+.cv__standingtags,
+.cv__rowwarn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  min-width: 0;
+}
+
+.cv__reason,
+.cv__meta {
+  font-size: 0.76rem;
+  color: var(--text-muted, #94a3b8);
+  overflow-wrap: anywhere;
+}
+
+.cv__checksum {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.cv__flag {
+  font-size: 0.68rem;
+  padding: 1px 6px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+
+.cv__flag--warn { color: var(--tone-warn, #fbbf24); }
+.cv__flag--danger { color: var(--tone-danger, #f87171); }
+.cv__flag--info { color: var(--tone-info, #60a5fa); }
+
+/* --- detail panel ------------------------------------------------------- */
+
+.cv__panel {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+
+.cv__panelhead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.cv__form {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 0;
+}
+
+.cv__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.cv__deps,
+.cv__records {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 0.82rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cv__link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--tone-accent, #a78bfa);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* --- consequences ------------------------------------------------------- */
+
+.cv__consequences {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 0.8rem;
+}
+
+.cv__req--no {
+  color: var(--text-muted, #94a3b8);
+}
+
+/* --- comparison --------------------------------------------------------- */
+
+.cv__compareform {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 640px) {
+  .cv__compareform {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: end;
+  }
+}
+
+/*
+ * The scroll container. This is the rule that keeps the page from scrolling
+ * sideways at 390 px: the table is allowed to be wider than the viewport, and
+ * the overflow is confined here rather than escaping to the body.
+ */
+.cv__tablewrap {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cv__table {
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  /* Narrow enough to fit a phone; wider content scrolls inside the wrapper. */
+  min-width: 22rem;
+}
+
+.cv__table caption {
+  text-align: left;
+  padding-bottom: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+.cv__table th,
+.cv__table td {
+  border-bottom: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.18));
+  padding: 6px 10px 6px 0;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.cv__table tbody th {
+  font-weight: 600;
+  white-space: normal;
+}
+
+.cv__scientific th {
+  color: var(--tone-warn, #fbbf24);
+}

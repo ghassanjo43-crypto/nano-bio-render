@@ -1,0 +1,124 @@
+{
+  "nanoparticles": [
+    {
+      "id": "np_001",
+      "name": "Lipid Nanoparticle (LNP)",
+      "type": "Lipid-based",
+      "description": "Ionizable lipid nanoparticle for mRNA delivery",
+      "typical_size_range": [50, 200],
+      "typical_charge_range": [-30, 10],
+      "common_ligands": ["PEG", "PEG2000", "Cholesterol"],
+      "common_payloads": ["mRNA", "siRNA", "DNA"],
+      "advantages": "High transfection efficiency, clinically validated (COVID-19 vaccines)",
+      "limitations": "Potential immunogenicity, storage requirements"
+    },
+    {
+      "id": "np_002",
+      "name": "Gold Nanoparticle (AuNP)",
+      "type": "Metallic",
+      "description": "Gold-based nanoparticle for imaging and photothermal therapy",
+      "typical_size_range": [5, 100],
+      "typical_charge_range": [-40, -5],
+      "common_ligands": ["PEG", "Citrate", "Thiol-PEG", "Antibodies"],
+      "common_payloads": ["Small molecules", "siRNA", "Proteins"],
+      "advantages": "Biocompatible, easily functionalized, optical properties",
+      "limitations": "Non-biodegradable, potential accumulation"
+    },
+    {
+      "id": "np_003",
+      "name": "Polymeric Nanoparticle (PLGA)",
+      "type": "Polymer-based",
+      "description": "Biodegradable polymer nanoparticle for controlled release",
+      "typical_size_range": [50, 300],
+      "typical_charge_range": [-20, 20],
+      "common_ligands": ["PEG", "RGD peptide", "Folate", "Transferrin"],
+      "common_payloads": ["Small molecules", "Proteins", "Peptides", "siRNA"],
+      "advantages": "Biodegradable, FDA-approved, controlled release",
+      "limitations": "Acidic degradation products, limited for large biomolecules"
+    },
+    {
+      "id": "np_004",
+      "name": "Silica Nanoparticle (MSN)",
+      "type": "Inorganic",
+      "description": "Mesoporous silica for high drug loading capacity",
+      "typical_size_range": [50, 300],
+      "typical_charge_range": [-40, -10],
+      "common_ligands": ["PEG", "Amino groups", "Antibodies"],
+      "common_payloads": ["Small molecules", "Proteins", "Imaging agents"],
+      "advantages": "High surface area, tunable pore size, stable",
+      "limitations": "Clearance concerns, potential toxicity at high doses"
+    },
+    {
+      "id": "np_005",
+      "name": "Liposome",
+      "type": "Lipid-based",
+      "description": "Spherical vesicle with aqueous core",
+      "typical_size_range": [50, 500],
+      "typical_charge_range": [-50, 50],
+      "common_ligands": ["PEG", "Antibodies", "Peptides"],
+      "common_payloads": ["Hydrophilic drugs", "Hydrophobic drugs", "siRNA"],
+      "advantages": "Clinically established, versatile, biocompatible",
+      "limitations": "Stability issues, rapid clearance without PEGylation"
+    },
+    {
+      "id": "np_006",
+      "name": "Quantum Dot (QD)",
+      "type": "Semiconductor",
+      "description": "Fluorescent nanocrystals for imaging",
+      "typical_size_range": [2, 10],
+      "typical_charge_range": [-30, 30],
+      "common_ligands": ["PEG", "Peptides", "Antibodies"],
+      "common_payloads": ["Imaging only", "Small molecules"],
+      "advantages": "Strong fluorescence, photostability",
+      "limitations": "Potential heavy metal toxicity, limited clinical use"
+    },
+    {
+      "id": "np_007",
+      "name": "Carbon Nanotube (CNT)",
+      "type": "Carbon-based",
+      "description": "Cylindrical carbon structure with high surface area",
+      "typical_size_range": [1, 100],
+      "typical_charge_range": [-30, 20],
+      "common_ligands": ["PEG", "Proteins", "DNA"],
+      "common_payloads": ["Small molecules", "siRNA", "Proteins"],
+      "advantages": "High drug loading, unique optical properties",
+      "limitations": "Toxicity concerns, aggregation, clearance issues"
+    },
+    {
+      "id": "np_008",
+      "name": "Dendrimer",
+      "type": "Polymer-based",
+      "description": "Highly branched synthetic polymer",
+      "typical_size_range": [1, 15],
+      "typical_charge_range": [-50, 50],
+      "common_ligands": ["PEG", "Acetyl groups", "Folate"],
+      "common_payloads": ["Small molecules", "siRNA", "DNA"],
+      "advantages": "Precise structure, multivalent surface",
+      "limitations": "Potential toxicity from positive charges, complex synthesis"
+    },
+    {
+      "id": "np_009",
+      "name": "Metal-Organic Framework (MOF)",
+      "type": "Hybrid",
+      "description": "Porous crystalline material with metal ions and organic linkers",
+      "typical_size_range": [50, 500],
+      "typical_charge_range": [-20, 20],
+      "common_ligands": ["PEG", "Biotin", "Folate"],
+      "common_payloads": ["Small molecules", "Proteins", "Gas molecules"],
+      "advantages": "Ultra-high porosity, tunable structure, high loading",
+      "limitations": "Stability in physiological conditions, newer technology"
+    },
+    {
+      "id": "np_010",
+      "name": "Exosome",
+      "type": "Biological",
+      "description": "Cell-derived vesicle for natural delivery",
+      "typical_size_range": [30, 150],
+      "typical_charge_range": [-40, -10],
+      "common_ligands": ["Natural surface proteins", "Engineered peptides"],
+      "common_payloads": ["RNA", "Proteins", "Small molecules"],
+      "advantages": "Natural biocompatibility, immune evasion, cell-specific targeting",
+      "limitations": "Production scalability, standardization challenges"
+    }
+  ]
+}

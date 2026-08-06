@@ -1,0 +1,281 @@
+==============================================================================
+NANOBIO STUDIO — CALCULATION REPORT
+==============================================================================
+
+RESEARCH USE ONLY. This report is a computational research-planning
+output. It is not experimentally validated, not clinically validated,
+not a regulatory approval prediction, not a diagnosis, not a dosing or
+treatment recommendation, and not a substitute for wet-lab or in-vivo
+study.
+
+
+==============================================================================
+1. RECORD
+==============================================================================
+
+  Run name.............................. Breast cancer — HER2-targeted stealth nanoparticle
+
+  Run id................................ 3
+
+  Recorded at........................... 2026-08-03T10:02:35.123Z
+
+  Status................................ complete
+
+
+  *** SYNTHETIC DEMONSTRATION DATA ***
+  The inputs in this report came from a built-in demonstration
+  scenario. They are synthetic. They are NOT patient data, NOT
+  clinical data, NOT validated experimental data, NOT a treatment
+  recommendation, and NOT a known-successful formulation.
+  The results were nonetheless calculated by the genuine engines
+  from those synthetic inputs.
+
+  Demonstration scenario................ breast-her2-targeted
+
+  Fixture set version................... demo-scenarios-1.0.0
+
+
+==============================================================================
+2. THERAPEUTIC CONTEXT
+==============================================================================
+
+  Indication............................ Breast Cancer
+
+  Subtype............................... HER2-enriched (ER-, PR-, HER2+)
+
+  Therapeutic agent..................... Trastuzumab (Herceptin)
+
+
+  Recorded for traceability only. Neither connected engine accepts a
+  disease as an input, so this context did not affect any value in
+  this report.
+
+==============================================================================
+3. FORMULATION INPUTS
+==============================================================================
+
+  size_nm............................... 95
+
+  charge_mv............................. -8
+
+  encapsulation_percent................. 88
+
+  pdi................................... 0.12
+
+  hydrodynamic_size_nm.................. 112
+
+  surface_coating....................... PEG (Stealth)
+
+  coating_thickness_nm.................. 3
+
+  surface_area_nm2...................... 280
+
+  hydrophobicity_logp................... 1.2
+
+  crystallinity_index................... 60
+
+  functional_groups..................... -COOH (Carboxyl)
+
+  ligand................................ Anti-HER2
+
+  ligand_density_percent................ 55
+
+  receptor_binding_kd_nm................ 8
+
+  stability_percent..................... 90
+
+  degradation_time_days................. 28
+
+  release_predictability_percent........ 88
+
+
+==============================================================================
+4. PHARMACOKINETIC INPUTS
+==============================================================================
+
+  dose_mg_kg............................ 4
+
+  kabs_per_h............................ 0.4
+
+  kel_per_h............................. 0.06
+
+  k12_per_h............................. 0.25
+
+  k21_per_h............................. 0.08
+
+  duration_h............................ 72
+
+
+  Rate constants are INPUTS, not predictions. The model does not
+  derive them from the formulation above.
+
+==============================================================================
+5. ENGINES EXECUTED
+==============================================================================
+
+  - Design impact score (core.scoring.compute_impact)
+  - Pharmacokinetic simulation (utils.pk_model)
+
+
+==============================================================================
+6. ENGINES NOT EXECUTED
+==============================================================================
+
+  - Scientific assessments
+      reason: The assessment engines are not connected to this workflow.
+
+
+==============================================================================
+7. CALCULATED RESULTS — DESIGN IMPACT SCORE
+==============================================================================
+
+  Delivery (0-100, higher is better).... 91.64356435643566
+
+  Toxicity (0-10, lower is better)...... 1.1400000000000001
+
+  Cost (0-100, lower is better)......... 100
+
+
+  Model / formula version............... design-impact-adapter-0.1.0
+
+  Scientific source..................... core.scoring.compute_impact
+
+  Prediction basis...................... rule_based_physicochemical_heuristic
+
+  Evidence level........................ literature_informed_unvalidated
+
+  Validation status..................... not_experimentally_validated
+
+
+  No single composite "overall score" is produced: the candidate
+  formula is documented but not implemented, pending scientific
+  review.
+
+------------------------------------------------------------------------------
+  Warnings
+------------------------------------------------------------------------------
+  (none reported)
+
+------------------------------------------------------------------------------
+  Limitations
+------------------------------------------------------------------------------
+  - Computational research-planning result only. Not experimentally validated, not clinically validated, and not a substitute for wet-lab testing.
+  - Not a regulatory approval prediction, diagnosis, or treatment recommendation.
+  - Scores are produced by rule-based physicochemical heuristics, not by a trained or calibrated model.
+  - No uncertainty quantification exists for these values (open question Q5 in docs/SCORING_CANONICALIZATION.md).
+  - Delivery, Toxicity and Cost are reported separately. No single composite 'Overall Score' is produced: the candidate formula is documented but NOT implemented, pending scientific review.
+  - The 12 internal sub-scores that feed Delivery are not exposed, because the canonical function does not return them and this slice must not modify it.
+  - Only the design score is computed here. Assessment-engine outputs (safety, disease-fit, manufacturability, regulatory, confidence) are NOT included and must not be combined with it.
+
+
+==============================================================================
+8. CALCULATED RESULTS — PHARMACOKINETIC SIMULATION
+==============================================================================
+
+  All amounts below are expressed as dose-scaled compartment amount (arbitrary units).
+
+  The model has no volume-of-distribution term, so these are NOT
+  concentrations and must NOT be read as ng/mL.
+
+
+  Peak amount, central compartment...... 1.7499988727078915
+
+  Time to peak, central (h)............. 3
+
+  Peak amount, peripheral compartment... 2.301207086780483
+
+  Time to peak, peripheral (h).......... 13.3
+
+  AUC, central (amount x h)............. 42.718975461192706
+
+  AUC, peripheral (amount x h).......... 119.34453262294609
+
+  Terminal half-life, central (h)....... 7.600000000000001
+
+  Tissue accumulation ratio............. 2.793712427194386
+
+  Peak ratio (peripheral/central)....... 1.3149763252245241
+
+  Profile points calculated............. 721
+
+
+  Calculation version................... pk-two-compartment-adapter-0.1.0
+
+  Model................................. two_compartment_depot_forward_euler
+
+  Scientific source..................... utils.pk_model.two_compartment_model + utils.pk_model.calculate_pk_parameters
+
+  Prediction basis...................... mechanistic_compartmental_ode_forward_euler
+
+  Evidence level........................ structural_model_with_user_supplied_rate_constants
+
+  Validation status..................... not_experimentally_validated
+
+
+------------------------------------------------------------------------------
+  Quantities this model does NOT produce
+------------------------------------------------------------------------------
+  - clearance
+      The migrated model has no volume-of-distribution term, so a clearance in volume/time cannot be derived from its output. Computing one (for example Dose/AUC) would introduce a new scientific quantity that the legacy implementation never produced, so none is returned.
+
+  - volume_of_distribution
+      Not modelled. The state variables are dose-scaled amounts, not concentrations, so no volume term exists to report.
+
+  - bioavailability
+      Not modelled. The full dose is placed in the depot compartment and no absorbed fraction is estimated.
+
+  - auc_extrapolated_to_infinity
+      The legacy implementation integrates over the simulated window only. Extrapolation would be a new calculation.
+
+------------------------------------------------------------------------------
+  Assumptions
+------------------------------------------------------------------------------
+  - Three-stage linear structure: depot (administration site) -> central (plasma) -> peripheral (tissue), with return transfer from peripheral.
+  - All transfers are first-order with constant rate coefficients; no saturable or concentration-dependent kinetics are modelled.
+  - Elimination occurs only from the central compartment.
+  - Rate constants (k_abs, k_el, k_12, k_21) are supplied by the user. They are not fitted, predicted, or derived from the formulation parameters.
+  - Solved by explicit forward-Euler integration at a fixed time step. The step size is part of the model's numerical identity: an adaptive solver would produce different numbers and is deliberately not used.
+  - The whole dose is placed in the depot compartment at t = 0.
+  - Compartment volumes are not modelled, so the state variables are dose-scaled amounts, reported in arbitrary units rather than mass per volume.
+  - AUC is computed by the trapezoidal rule over the simulated window only; it is not extrapolated to infinity.
+  - Terminal half-life is read as the first time after the peak at which the central-compartment value falls to half the peak. It is reported as null when that never happens inside the simulated window.
+
+------------------------------------------------------------------------------
+  Warnings
+------------------------------------------------------------------------------
+  - Simulation window not fully specified; the legacy documented defaults were applied: time step = 0.1 h. These are numerical settings, not scientific inputs — the dose and rate constants were never defaulted.
+  - Concentrations are in arbitrary dose-scaled units. The model has no volume term, so they are not mass-per-volume concentrations.
+
+------------------------------------------------------------------------------
+  Limitations
+------------------------------------------------------------------------------
+  - Computational research-planning result only. Not experimentally validated, not clinically validated, and not a substitute for an in-vivo pharmacokinetic study.
+  - Not a regulatory approval prediction, diagnosis, dosing recommendation, or treatment recommendation.
+  - The rate constants are inputs, not predictions. The model does not infer them from particle size, charge, coating or any other design parameter, so the profile reflects the rate constants entered rather than the formulation itself.
+  - No compartment volume is modelled, so concentrations are in arbitrary dose-scaled units. Values must not be read as ng/mL or any other mass-per-volume unit.
+  - AUC is truncated at the end of the simulated window; no extrapolation to infinity is performed, so it is not AUC(0-inf).
+  - No inter-individual variability, uncertainty quantification or confidence interval is produced. The model is deterministic.
+  - The disease, subtype and therapeutic agent selected in the workflow are NOT inputs to this model and do not affect any value it returns.
+  - This is a separate calculation from the design impact score. The two share no inputs, no model and no version, and must not be combined.
+  - The legacy PDF report labelled these values 'ng/mL'. That label was inconsistent with the model, which has no volume term, and is not reproduced here.
+
+
+==============================================================================
+9. SCIENTIFIC VALIDATION STATUS
+==============================================================================
+
+  Every value in this report is a computational research-planning
+  result produced by rule-based or structural models that have NOT
+  been calibrated against experimental data.
+
+  This report is NOT:
+    - experimentally validated
+    - clinically validated
+    - a regulatory approval prediction
+    - a diagnosis
+    - a dosing or treatment recommendation
+    - a substitute for wet-lab or in-vivo study
+
+==============================================================================
+END OF REPORT
+==============================================================================

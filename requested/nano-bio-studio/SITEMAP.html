@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NanoBio Studio - Application Map</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tab-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+        }
+        
+        .content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .diagram-section {
+            margin: 30px 0;
+        }
+        
+        .diagram-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .flow-diagram {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 0.9em;
+            color: #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .entry-point {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+        
+        .entry-point strong {
+            color: #667eea;
+        }
+        
+        .role-box {
+            background: #f0f4c3;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #fbc02d;
+        }
+        
+        .role-box h3 {
+            margin-bottom: 10px;
+            color: #f57f17;
+        }
+        
+        .role-box ul {
+            margin-left: 20px;
+        }
+        
+        .role-box li {
+            margin: 5px 0;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧬 NanoBio Studio</h1>
+            <p>Application Navigation Map & Structure Overview</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('visual')">📊 Visual Map</button>
+            <button class="tab-btn" onclick="switchTab('flow')">📈 Data Flow</button>
+            <button class="tab-btn" onclick="switchTab('pages')">📄 Pages</button>
+            <button class="tab-btn" onclick="switchTab('tabs')">🗂️ Internal Tabs</button>
+            <button class="tab-btn" onclick="switchTab('roles')">👥 User Roles</button>
+        </div>
+        
+        <!-- Visual Map Tab -->
+        <div id="visual" class="content active">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 20px;">Application Navigation Flow</h2>
+            <div class="mermaid">
+                graph TD
+                    A["🔐 Login"] -->|Authenticate| B["🏠 Disease Selection"]
+                    B --> C["1️⃣ Features"]
+                    C --> D["3️⃣ Design Parameters"]
+                    D --> E["4️⃣ Run Simulation"]
+                    E --> F["5️⃣ Trial History"]
+                    F --> G["1️⃣7️⃣ Analytics"]
+                    
+                    B -->|Access| H["9️⃣ AI Co-Designer"]
+                    B -->|Access| I["1️⃣0️⃣ Tutorial"]
+                    B -->|Access| J["1️⃣2️⃣ ML Training"]
+                    B -->|Access| K["1️⃣4️⃣ Data Sources"]
+                    
+                    E --> N["📋 Internal Tabs"]
+                    N -->|Contains| O["Design • Protocol • Materials"]
+                    N -->|Contains| P["Toxicity • Cost • Delivery"]
+                    N -->|Contains| Q["Optimize • Quiz • 3D View"]
+                    
+                    style A fill:#e1f5ff
+                    style B fill:#c8e6c9
+                    style E fill:#fff9c4
+                    style N fill:#f0f4c3
+            </div>
+        </div>
+        
+        <!-- Data Flow Tab -->
+        <div id="flow" class="content">
+            <div class="diagram-section">
+                <h2>User Journey & Data Flow</h2>
+                <div class="flow-diagram">Login → Authentication Check
+    ├─ Success: Load User Session & Permissions
+    └─ Failure: Show Error Message
+            ↓
+Disease Selection Page
+    Get user context, select disease pathway
+            ↓
+Main Workflow (Sequential)
+    Features → Design Parameters → Simulation → Results → Analytics
+            ↓
+Each Page Accesses: 9 Internal Tabs
+    Home, Design, Protocol, Materials, Toxicity, Cost, Delivery, Optimize, Quiz, 3D
+            ↓
+Data Operations
+    Read/Write to: nanobio_studio.db, trial_registry.db, users.db
+            ↓
+External Services
+    AI Engine, ToxCast API, Data Downloader
+            ↓
+Output: Results, Reports, Visualizations
+                </div>
+            </div>
+            
+            <div class="diagram-section">
+                <h2>Database Architecture</h2>
+                <div class="flow-diagram">Main Databases:
+├── nanobio_studio.db: Core application data
+├── trial_registry.db: Simulation trials & results
+├── users.db: User credentials & profiles
+└── ml_module.db: ML model training records
+
+Data Persistence Layer:
+├── persistence.py: Session & state management
+├── models.py: ORM models
+└── design_persistence.py: Design workflow state
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pages Tab -->
+        <div id="pages" class="content">
+            <h2>Main Application Pages (Ordered)</h2>
+            <table>
+                <tr>
+                    <th>Order</th>
+                    <th>File</th>
+                    <th>Purpose</th>
+                    <th>Access Level</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td><strong>0_Disease_Selection.py</strong></td>
+                    <td>Main workflow entry, disease & pathology selection</td>
+                    <td>All Authenticated Users</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><strong>1_Features.py</strong></td>
+                    <td>Feature definition and setup</td>
+                    <td>Designer+</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>3_Design_Parameters.py</strong></td>
+                    <td>Configure design parameters</td>
+                    <td>Designer+</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>4_Run_Simulation.py</strong></td>
+                    <td>Execute nanoparticle simulations</td>
+                    <td>Designer+</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>5_Trial_History.py</strong></td>
+                    <td>View, filter & analyze trial results</td>
+                    <td>All Authenticated Users</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>9_AI_Co_Designer.py</strong></td>
+                    <td>AI-powered design suggestions & optimization</td>
+                    <td>Designer+</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>10_Tutorial.py</strong></td>
+                    <td>Learning resources & documentation</td>
+                    <td>All Users</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><strong>12_ML_Training.py</strong></td>
+                    <td>Machine learning model training</td>
+                    <td>Admin</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><strong>13_Database_Records.py</strong></td>
+                    <td>Database management & records</td>
+                    <td>Admin</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><strong>14_Data_Sources.py</strong></td>
+                    <td>Manage internal data sources</td>
+                    <td>Admin</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td><strong>15_External_Data_Sources.py</strong></td>
+                    <td>Configure external APIs & connectors</td>
+                    <td>Admin</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><strong>17_Data_Analytics.py</strong></td>
+                    <td>Advanced analytics & reporting</td>
+                    <td>All Authenticated Users</td>
+                </tr>
+            </table>
+            
+            <h2 style="margin-top: 30px;">Utility Pages</h2>
+            <div class="entry-point">
+                <strong>Login.py</strong> - Authentication Entry Point<br/>
+                Handles user login, redirects to disease selection after authentication
+            </div>
+            <div class="entry-point">
+                <strong>audit_dashboard.py</strong> - Audit & Compliance<br/>
+                Admin dashboard for system auditing and compliance tracking
+            </div>
+            <div class="entry-point">
+                <strong>About_AI_Co_Designer.py</strong> - AI Documentation<br/>
+                Information and documentation about AI Co-Designer features
+            </div>
+        </div>
+        
+        <!-- Tabs Tab -->
+        <div id="tabs" class="content">
+            <h2>Internal Tabs (Accessible During Simulation)</h2>
+            <div class="flow-diagram">
+File Location: /tabs/
+
+├── home.py ................ 🏠 Dashboard & Overview
+├── design.py .............. 🎨 Design Workspace (Main Interface)
+├── protocol.py ............ 📋 Protocol Development
+├── materials.py ........... 🧪 Materials & Composition
+├── toxicity.py ............ ☠️  Toxicity Assessment & Analysis
+├── cost.py ................ 💰 Cost Analysis & Economics
+├── delivery.py ............ 📦 Delivery Strategy & Routes
+├── optimize.py ............ ⚡ Multi-Objective Optimization
+├── quiz.py ................ ❓ Knowledge Assessment & Learning
+└── view3d.py .............. 🎯 3D Visualization & Rendering
+            </div>
+            
+            <h2 style="margin-top: 30px;">Tab Features</h2>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Home Tab:</strong> Dashboard overview, quick stats, recent trials</li>
+                <li><strong>Design Tab:</strong> Main design interface, component configuration</li>
+                <li><strong>Protocol Tab:</strong> Step-by-step protocol development</li>
+                <li><strong>Materials Tab:</strong> Material selection, composition, properties</li>
+                <li><strong>Toxicity Tab:</strong> Toxicity predictions, safety data, risk assessment</li>
+                <li><strong>Cost Tab:</strong> Pricing, budget analysis, ROI calculations</li>
+                <li><strong>Delivery Tab:</strong> Delivery methods, targeting strategies, patient routes</li>
+                <li><strong>Optimize Tab:</strong> Pareto optimization, multi-parameter tuning</li>
+                <li><strong>Quiz Tab:</strong> Interactive learning, knowledge verification</li>
+                <li><strong>3D View Tab:</strong> 3D molecular visualization, rendering, exploration</li>
+            </ul>
+        </div>
+        
+        <!-- Roles Tab -->
+        <div id="roles" class="content">
+            <h2>User Roles & Access Control</h2>
+            
+            <div class="role-box">
+                <h3>👤 Admin</h3>
+                <ul>
+                    <li>✅ Full access to all pages (0-17)</li>
+                    <li>✅ Data sources management</li>
+                    <li>✅ ML model training & management</li>
+                    <li>✅ Database administration</li>
+                    <li>✅ User management</li>
+                    <li>✅ Audit dashboard & compliance</li>
+                    <li>✅ External data source configuration</li>
+                </ul>
+            </div>
+            
+            <div class="role-box" style="border-left-color: #4caf50; background: #e8f5e9;">
+                <h3 style="color: #2e7d32;">👨‍💼 Designer</h3>
+                <ul>
+                    <li>✅ Main workflow pages (0, 1, 3, 4, 5)</li>
+                    <li>✅ All internal tabs (Design, Protocol, Materials, etc.)</li>
+                    <li>✅ AI Co-Designer features</li>
+                    <li>✅ Tutorial & learning resources</li>
+                    <li>✅ Trial history & analytics</li>
+                    <li>❌ Admin pages (12-15)</li>
+                </ul>
+            </div>
+            
+            <div class="role-box" style="border-left-color: #2196f3; background: #e3f2fd;">
+                <h3 style="color: #1565c0;">👁️  Viewer</h3>
+                <ul>
+                    <li>✅ Read-only trial history</li>
+                    <li>✅ View analytics & results</li>
+                    <li>✅ Tutorial & documentation</li>
+                    <li>❌ Design capabilities</li>
+                    <li>❌ Simulation execution</li>
+                    <li>❌ Admin features</li>
+                </ul>
+            </div>
+            
+            <h2 style="margin-top: 30px;">RBAC Implementation</h2>
+            <div class="flow-diagram">
+Files: rbac.py, auth.py, streamlit_auth.py
+
+Authentication Flow:
+    User Login → Credential Verification
+        ↓
+    Role Assignment & Session Creation
+        ↓
+    Permission Check on Page Access
+        ↓
+    Render UI based on Role:
+        ├─ Admin: Show all UI elements
+        ├─ Designer: Show workflow + tabs
+        └─ Viewer: Show read-only views
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>🧬 NanoBio Studio Application Map | Generated March 18, 2026</p>
+        <p>For detailed information, see SITEMAP.md in the project root</p>
+    </footer>
+    
+    <script>
+        function switchTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active state from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Mark button as active
+            event.target.classList.add('active');
+            
+            // Render Mermaid diagrams if present in the tab
+            mermaid.contentLoaded();
+        }
+        
+        // Initialize Mermaid
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</body>
+</html>

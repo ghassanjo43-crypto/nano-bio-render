@@ -1,0 +1,11 @@
+# Canonical FastAPI backend. Its pyproject owns production dependencies,
+# including loguru for the retained pre-consolidation backend modules.
+-e ./nanobio_studio_backend
+
+# Runtime dependencies used by the canonical vertical slice but not yet
+# represented by the older backend package metadata.
+aiosqlite>=0.20.0
+bcrypt>=4.0.0
+python-multipart>=0.0.9
+reportlab>=4.0.0
+pypdf>=5.0.0

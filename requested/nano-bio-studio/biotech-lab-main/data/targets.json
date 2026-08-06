@@ -1,0 +1,184 @@
+{
+  "targets": [
+    {
+      "id": "target_001",
+      "name": "Tumor Tissue (Solid)",
+      "type": "Cancer",
+      "description": "Solid tumor tissue with EPR effect",
+      "receptors": ["EGFR", "HER2", "Folate receptor", "Transferrin receptor"],
+      "key_features": [
+        "Enhanced permeability and retention (EPR)",
+        "Leaky vasculature",
+        "Poor lymphatic drainage",
+        "Acidic microenvironment (pH 6.5-7.0)"
+      ],
+      "typical_accumulation": "2-5% of injected dose",
+      "challenges": "Heterogeneous perfusion, high interstitial pressure"
+    },
+    {
+      "id": "target_002",
+      "name": "Liver Hepatocytes",
+      "type": "Organ",
+      "description": "Primary functional cells of the liver",
+      "receptors": ["Asialoglycoprotein receptor (ASGPR)", "LDLR", "Transferrin receptor"],
+      "key_features": [
+        "Fenestrated endothelium",
+        "High metabolic activity",
+        "Natural accumulation site for nanoparticles",
+        "Reticuloendothelial system (RES) presence"
+      ],
+      "typical_accumulation": "15-40% of injected dose",
+      "challenges": "Non-specific uptake by Kupffer cells, rapid clearance"
+    },
+    {
+      "id": "target_003",
+      "name": "Brain (Blood-Brain Barrier)",
+      "type": "Central Nervous System",
+      "description": "Brain tissue protected by BBB",
+      "receptors": ["Transferrin receptor", "LRP1", "Insulin receptor"],
+      "key_features": [
+        "Tight junctions in endothelium",
+        "Efflux transporters (P-gp, BCRP)",
+        "Limited permeability (<500 Da, lipophilic)",
+        "Active transport mechanisms"
+      ],
+      "typical_accumulation": "<0.1% of injected dose",
+      "challenges": "BBB penetration, efflux pumps, size restrictions"
+    },
+    {
+      "id": "target_004",
+      "name": "Lung Endothelium",
+      "type": "Respiratory System",
+      "description": "Pulmonary vascular endothelium",
+      "receptors": ["ACE", "ICAM-1", "VCAM-1"],
+      "key_features": [
+        "First-pass filtration for IV particles",
+        "Large surface area",
+        "High blood flow",
+        "Fenestrations in alveolar capillaries"
+      ],
+      "typical_accumulation": "5-15% of injected dose (IV), 60-90% (inhalation)",
+      "challenges": "Rapid clearance via mucociliary escalator, macrophage uptake"
+    },
+    {
+      "id": "target_005",
+      "name": "Kidney Glomeruli",
+      "type": "Renal System",
+      "description": "Kidney filtration units",
+      "receptors": ["Megalin", "Cubilin"],
+      "key_features": [
+        "Size-selective filtration (<5.5 nm pass)",
+        "Charge-selective (negative charge repelled)",
+        "High blood flow",
+        "Proximal tubule reabsorption"
+      ],
+      "typical_accumulation": "Varies by size: <10 nm rapidly cleared",
+      "challenges": "Nephrotoxicity risk, rapid excretion of small particles"
+    },
+    {
+      "id": "target_006",
+      "name": "Spleen (Reticuloendothelial System)",
+      "type": "Immune System",
+      "description": "Immune organ with high macrophage content",
+      "receptors": ["Fc receptors", "Complement receptors", "Scavenger receptors"],
+      "key_features": [
+        "Removal of opsonized particles",
+        "Macrophage-rich red pulp",
+        "Filtration of large particles (>200 nm)",
+        "Immune surveillance"
+      ],
+      "typical_accumulation": "10-30% of injected dose",
+      "challenges": "Non-specific sequestration, rapid clearance from circulation"
+    },
+    {
+      "id": "target_007",
+      "name": "Lymph Nodes",
+      "type": "Lymphatic System",
+      "description": "Secondary lymphoid organs",
+      "receptors": ["CD receptors", "Chemokine receptors"],
+      "key_features": [
+        "Drainage of interstitial fluid",
+        "Size-dependent accumulation (10-100 nm optimal)",
+        "Immune cell activation site",
+        "Subcutaneous injection targets regional nodes"
+      ],
+      "typical_accumulation": "1-10% (depends on administration route)",
+      "challenges": "Limited systemic access from lymphatics"
+    },
+    {
+      "id": "target_008",
+      "name": "Inflamed Tissue (Arthritis/IBD)",
+      "type": "Inflammatory Disease",
+      "description": "Sites of acute or chronic inflammation",
+      "receptors": ["Selectins", "Integrins", "VCAM-1", "ICAM-1"],
+      "key_features": [
+        "Increased vascular permeability",
+        "Upregulated adhesion molecules",
+        "Leukocyte infiltration",
+        "Enhanced EPR-like effect"
+      ],
+      "typical_accumulation": "3-8% of injected dose",
+      "challenges": "Dynamic microenvironment, off-target inflammation"
+    },
+    {
+      "id": "target_009",
+      "name": "Cardiovascular Plaques",
+      "type": "Cardiovascular Disease",
+      "description": "Atherosclerotic plaques in blood vessels",
+      "receptors": ["LOX-1", "Scavenger receptors", "VCAM-1"],
+      "key_features": [
+        "Macrophage accumulation",
+        "Oxidized LDL presence",
+        "Endothelial dysfunction",
+        "Inflammatory environment"
+      ],
+      "typical_accumulation": "0.5-3% of injected dose",
+      "challenges": "Limited penetration, risk of plaque rupture"
+    },
+    {
+      "id": "target_010",
+      "name": "Bone Marrow",
+      "type": "Hematopoietic System",
+      "description": "Site of blood cell production",
+      "receptors": ["CD44", "CXCR4", "VLA-4"],
+      "key_features": [
+        "Hematopoietic stem cell niche",
+        "Stromal cell support",
+        "Rich vasculature",
+        "Immune cell production"
+      ],
+      "typical_accumulation": "5-15% of injected dose",
+      "challenges": "Bone penetration, myelotoxicity risk"
+    },
+    {
+      "id": "target_011",
+      "name": "Skin (Dermal/Transdermal)",
+      "type": "Integumentary System",
+      "description": "Skin layers for topical/transdermal delivery",
+      "receptors": ["Hair follicles", "Sebaceous glands"],
+      "key_features": [
+        "Stratum corneum barrier",
+        "Limited penetration for particles >500 Da",
+        "Follicular pathway for nanoparticles",
+        "Local immunomodulation possible"
+      ],
+      "typical_accumulation": "Highly localized, minimal systemic",
+      "challenges": "Barrier function, limited systemic absorption"
+    },
+    {
+      "id": "target_012",
+      "name": "Ocular Tissue (Eye)",
+      "type": "Ophthalmic",
+      "description": "Retinal and anterior chamber tissues",
+      "receptors": ["Mucin", "Hyaluronan receptors"],
+      "key_features": [
+        "Tear film clearance",
+        "Blood-retina barrier",
+        "Limited permeability",
+        "Sustained release beneficial"
+      ],
+      "typical_accumulation": "Local administration preferred",
+      "challenges": "Rapid clearance via tears, barrier penetration"
+    }
+  ]
+}

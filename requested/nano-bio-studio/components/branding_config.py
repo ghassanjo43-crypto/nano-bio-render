@@ -1,0 +1,18 @@
+"""
+Branding configuration - Minimal stubs for Streamlit Cloud compatibility
+"""
+
+APP_NAME = "NanoBio Studio"
+TAGLINE = "Connecting Nanotechnology &amp; Biotechnology"
+COMPANY_NAME = "Experts Group FZE"
+COPYRIGHT = "© 2024 Experts Group FZE"
+PROPRIETARY_NOTICE = "Confidential / Proprietary"
+FOUNDER_NAME = "Dr. Expert"
+FOUNDER_TITLE = "Founder & CEO"
+EMAIL = "info@expertsgroup.ae"
+PHONE = "+971-4-XXX-XXXX"
+WEBSITE = "https://expertsgroup.ae"
+LOCATION = "Dubai, UAE"
+IP_OWNERSHIP_STATEMENT = "All intellectual property is owned by Experts Group FZE"
+RESEARCH_DISCLAIMER = "This application is for research purposes only"
+LICENSING_CONTACT = "licensing@expertsgroup.ae"

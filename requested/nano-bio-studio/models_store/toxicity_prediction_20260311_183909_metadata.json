@@ -1,0 +1,25 @@
+{
+  "bundle_path": "models_store\\toxicity_prediction_20260311_183909.pkl",
+  "task_name": "toxicity_prediction",
+  "task_type": "predict_toxicity",
+  "target_variable": "Toxicity_%",
+  "model_types": [
+    "linear_regression",
+    "random_forest"
+  ],
+  "evaluation_summary": {
+    "linear_regression": {
+      "train": {
+        "mae": 0.9407740014590651,
+        "rmse": 1.2461920086608842,
+        "r2": 0.9859190792470528
+      },
+      "validation": {
+        "mae": 0.9868161870587447,
+        "rmse": 1.2965034696417346,
+        "r2": 0.9842363480834206
+      }
+    }
+  },
+  "created_at": "2026-03-11T14:39:09.043714"
+}

@@ -1,0 +1,246 @@
+/* ====================================================== workspace pages */
+.wp__filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.wp__detail { font-size: var(--text-xs); }
+.wp__body {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-700);
+}
+.wp__note {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+.wp__spaced { margin-top: var(--space-4); }
+
+/* A value that does not exist reads as absent, never as zero. */
+.wp__none {
+  font-style: italic;
+  color: var(--ink-400);
+}
+
+.wp__runname {
+  display: block;
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+}
+.wp__sub {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-normal);
+  color: var(--ink-500);
+}
+.wp__originbadge { margin-top: var(--space-1); }
+.wp__when { font-size: var(--text-xs); color: var(--ink-500); white-space: nowrap; }
+
+.wp__englist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-xs);
+  color: var(--ink-600);
+}
+
+.wp__check { display: grid; place-items: center; }
+.wp__check input { width: 16px; height: 16px; accent-color: var(--accent); }
+
+.wp__rowactions { display: flex; gap: var(--space-2); }
+
+.wp__emptyactions {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+/* ---------------------------------------------------------- sections */
+.wp__section {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.wp__subhead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-600);
+}
+.wp__section + .wp__subhead,
+.wp__subhead + * + .wp__subhead { margin-top: var(--space-4); }
+
+.wp__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.wp__list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+  align-items: start;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--ink-600);
+}
+.wp__list li svg { margin-top: 3px; color: var(--success-600); flex: none; }
+
+.wp__notlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.wp__notlist li {
+  display: grid;
+  gap: 2px;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--ink-200);
+}
+.wp__notname {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--ink-700);
+}
+.wp__notreason {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+
+/* ---------------------------------------------------------- context */
+.wp__context {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+.wp__context > div {
+  padding: var(--space-3);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.wp__context dt {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-500);
+}
+.wp__context dd {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+}
+
+/* ---------------------------------------------------------- compare */
+.wp__comparehead {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.wp__comparecol {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  justify-items: start;
+}
+.wp__colindex {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-500);
+}
+.wp__colname {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+  line-height: var(--leading-snug);
+}
+.wp__coldate { font-size: var(--text-2xs); color: var(--ink-400); }
+
+.wp__unitnote {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-normal);
+  color: var(--ink-400);
+}
+
+/* Charts are shown separately, never overlaid: the model defines no common
+   scale across runs, so a shared axis would misrepresent the data. */
+.wp__charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+.wp__chartcell { margin: 0; }
+.wp__chartcap {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-700);
+}
+
+.wp__notgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+.wp__notrunhead {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-700);
+}
+
+.wp__footer {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 760px) {
+  .wp__filters { grid-template-columns: 1fr; }
+  .wp__charts { grid-template-columns: 1fr; }
+  .wp__rowactions { flex-direction: column; }
+}
+
+/* Evidence & Validation status counts. */
+.wp__countchip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.22));
+  border-radius: 999px;
+  font-size: 0.82rem;
+}

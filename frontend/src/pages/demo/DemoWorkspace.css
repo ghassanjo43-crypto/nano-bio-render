@@ -1,0 +1,198 @@
+/* ============================================================ demo workspace */
+.dw__lead {
+  margin: var(--space-4) 0;
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+.dw__detail { font-size: var(--text-xs); }
+
+.dw__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.dw__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+/* Technical scenarios demonstrate platform behaviour, not an indication —
+   visually distinguished so they are not mistaken for research material. */
+.dw__card--tech {
+  border-style: dashed;
+  background: var(--surface-sunken);
+}
+
+.dw__cardhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.dw__cardtitle {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+  line-height: var(--leading-snug);
+  margin: 0;
+}
+
+.dw__meta {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+.dw__meta--wide { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+.dw__meta dt {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-500);
+}
+.dw__meta dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-800);
+}
+
+.dw__purpose {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-600);
+  margin: 0;
+}
+
+.dw__engines {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+}
+.dw__engines li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.dw__engines li.is-on { color: var(--success-700); }
+.dw__engines li.is-off { color: var(--ink-400); }
+.dw__engines li span { color: var(--ink-400); }
+
+.dw__cardactions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+.dw__cardactions > * { flex: 1; }
+
+.dw__version {
+  margin-top: var(--space-5);
+  font-size: var(--text-xs);
+  color: var(--ink-500);
+}
+.dw__version code, .dw__cmd {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  background: var(--ink-100);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+}
+.dw__cmd { display: inline-block; margin-top: var(--space-2); }
+
+/* ------------------------------------------------------------- preview */
+.dw__preview { display: grid; gap: var(--space-5); }
+.dw__preview section { display: grid; gap: var(--space-2); }
+
+.dw__subhead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin: 0;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-600);
+}
+.dw__hbadge { text-transform: none; letter-spacing: 0; }
+
+.dw__body {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+.dw__note {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+
+.dw__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.dw__list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+  align-items: start;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+.dw__list li svg { margin-top: 2px; color: var(--ink-400); flex: none; }
+
+.dw__notlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.dw__notlist li {
+  display: grid;
+  gap: 2px;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--ink-200);
+}
+.dw__notname {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--ink-700);
+}
+.dw__notreason {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+
+/* A deliberately absent required input is styled as absent, never as zero. */
+.dw__missing td,
+.dw__missing th {
+  color: var(--danger-700);
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .dw__grid { grid-template-columns: 1fr; }
+  .dw__cardactions { flex-direction: column; }
+}

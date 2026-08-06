@@ -1,0 +1,31 @@
+# Slide: Machine Learning Features in NanoBio Studio
+
+## Advanced ML Integration
+- Seamlessly integrates machine learning models for predictive analytics and design optimization
+- Converts nanoparticle design parameters into ML-ready features for accurate predictions
+- Supports supervised and unsupervised learning for property prediction, risk assessment, and clustering
+- Enables rapid hypothesis testing and scenario analysis using AI-driven insights
+- ML models are continuously updated with new data for improved accuracy and relevance
+
+## Key Benefits
+- Accelerates discovery by predicting efficacy, toxicity, and manufacturability
+- Reduces experimental workload and cost
+- Supports explainable AI for transparent decision-making
+
+---
+
+# Slide: Connectivity with Scientific Datasets
+
+## Massive Data Integration
+- Connects with a vast array of scientific datasets, including:
+  - 500+ synthetic and real-world lipid nanoparticle (LNP) samples
+  - Public databases: PubMed, PubChem, DrugBank, ChemSpider, PDB
+  - Vendor and open research datasets (Evonik, Croda, Merck, Zenodo, GitHub)
+- Automated data import/export in CSV, JSON, and custom formats
+- Enables cross-referencing, benchmarking, and validation of new designs
+- Facilitates data-driven research, regulatory submissions, and meta-analyses
+
+## Key Benefits
+- Ensures robust, evidence-based design and simulation
+- Empowers users to leverage the latest scientific knowledge
+- Scales with growing data sources and research needs

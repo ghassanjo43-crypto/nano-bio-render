@@ -1,0 +1,107 @@
+.scb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3, 12px);
+  padding: 10px 0 14px;
+  border-bottom: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.22));
+  margin-bottom: var(--space-4, 16px);
+}
+
+.scb__crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+}
+
+.scb__crumbs li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scb__crumbs a {
+  color: var(--text-muted, #94a3b8);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.scb__crumbs a:hover {
+  color: var(--text-strong, #e2e8f0);
+  text-decoration: underline;
+}
+
+/* Focus must be visible on its own, not signalled by colour alone. */
+.scb__crumbs a:focus-visible {
+  outline: 2px solid var(--focus-ring, #38bdf8);
+  outline-offset: 2px;
+}
+
+.scb__crumbs [aria-current='page'] {
+  color: var(--text-strong, #e2e8f0);
+  font-weight: 600;
+}
+
+.scb__sep {
+  color: var(--text-faint, #64748b);
+}
+
+.scb__study {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.scb__name {
+  font-weight: 600;
+  color: var(--text-strong, #e2e8f0);
+  /* A long user-chosen name must not push the save state off-screen. */
+  max-width: 32ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scb__disease {
+  color: var(--text-muted, #94a3b8);
+}
+
+.scb__save {
+  font-size: 0.78rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle, rgba(148, 163, 184, 0.28));
+  color: var(--text-muted, #94a3b8);
+}
+
+/* Each save state carries a distinct word as well as a distinct colour, so the
+   state is never signalled by colour alone. */
+.scb__save--saved {
+  color: var(--tone-success, #4ade80);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+
+.scb__save--unsaved {
+  color: var(--tone-warn, #fbbf24);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+@media (max-width: 720px) {
+  .scb {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .scb__name {
+    max-width: 22ch;
+  }
+}

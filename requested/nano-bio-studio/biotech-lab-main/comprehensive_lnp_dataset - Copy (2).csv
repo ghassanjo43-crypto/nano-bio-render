@@ -1,0 +1,203 @@
+Batch_ID,Material,Size_nm,PDI,Charge_mV,Encapsulation_%,Stability_%,Toxicity_%,Hydrodynamic_Size_nm,Surface_Area_nm2,Pore_Size_nm,Degradation_Time_days,Target_Cells,Ligand,Receptor,Delivery_Efficiency_%,Particle_Concentration_per_mL,Preparation_Method,pH,Osmolality_mOsm,Sterility_Pass,Endotoxin_EU_mL
+PFIZER-COVID-1,Lipid NP (LNP),95.0,0.15,-10.5,95.0,90.0,22.0,107.0,28274.0,2.5,30.0,Immune Cells,PEG,TLR,74.1,1.25e+14,Microfluidic,7.2,290.0,Yes,0.005
+MODERNA-COVID-1,Lipid NP (LNP),100.0,0.12,-9.0,93.0,88.0,25.0,112.0,31416.0,2.3,28.0,Immune Cells,PEG,TLR,69.75,1.10e+14,Microfluidic,7.1,285.0,Yes,0.006
+LNP-00003,Exosomes,100.43,0.203,-2.1,59.8,81.4,38.7,110.6,31683.8,2.88,55.5,Neurons,GalNAc,Folate Receptor,36.7,6.47e+14,Ethanol injection,7.0,307.0,Yes,0.3999
+LNP-00004,DNA Origami,110.1,0.101,11.2,71.4,71.3,11.0,115.68,38082.34,2.43,52.0,Spleen,Folate,EGFR,63.5,8.05e+14,Extrusion,7.1,257.6,Yes,0.1211
+LNP-00005,DNA Origami,87.56,0.12,-0.3,86.4,87.6,17.5,92.79,24083.4,1.84,53.9,Immune Cells,PEG,EGFR,71.3,1.81e+14,Ethanol injection,6.9,268.6,Yes,0.0014
+LNP-00006,Lipid NP (LNP),100.09,0.185,-7.0,75.5,85.8,29.1,109.36,31472.82,4.14,29.7,Lung Cells,Aptamer,HER2,53.6,8.11e+14,Ethanol injection,7.2,292.3,Yes,0.3808
+LNP-00007,PLGA,185.52,0.315,-17.7,73.6,72.4,36.5,214.71,108125.43,2.63,113.4,Spleen,Antibody,ASGPR,46.8,5.40e+14,Sonication,7.2,287.2,Yes,0.4762
+LNP-00008,Lipid NP (LNP),109.98,0.183,-5.2,88.0,89.1,31.1,120.02,37996.67,2.63,40.7,Immune Cells,GalNAc,HER2,60.6,2.44e+14,Extrusion,7.1,281.1,Yes,0.3829
+LNP-00009,Lipid NP (LNP),91.4,0.24,-7.7,93.6,76.5,36.8,102.38,26246.59,3.67,25.6,Spleen,Aptamer,TLR,59.2,7.22e+14,Spontaneous emission,7.3,290.1,Yes,0.1065
+LNP-00010,Liposomes,86.09,0.233,2.2,77.1,77.5,42.6,96.1,23281.88,3.05,50.7,Neurons,GalNAc,ASGPR,44.2,9.89e+14,Spontaneous emission,7.0,261.0,Yes,0.2693
+LNP-00011,PLGA,178.58,0.201,-8.3,62.9,60.7,31.2,196.49,100184.6,2.72,14.5,Spleen,PEG,EGFR,43.3,6.00e+14,Extrusion,7.3,278.3,Yes,0.4771
+LNP-00012,Lipid NP (LNP),83.89,0.217,-11.7,88.4,76.7,16.1,92.97,22106.49,1.73,35.3,Liver Cells,GalNAc,Folate Receptor,74.1,4.64e+14,Extrusion,7.2,314.2,Yes,0.4276
+LNP-00013,Exosomes,170.22,0.249,3.5,53.7,72.8,23.4,191.43,91027.9,3.89,34.7,Tumor Cells,PEG,TLR,41.1,1.44e+14,Ethanol injection,6.9,342.0,Yes,0.0079
+LNP-00014,Liposomes,186.66,0.194,-0.8,62.4,69.2,30.2,204.78,109457.38,1.75,23.3,Neurons,PEG,ASGPR,43.6,4.19e+14,Sonication,7.2,317.4,Yes,0.2189
+LNP-00015,PLGA,118.31,0.177,-14.9,73.2,68.5,34.4,128.79,43972.26,2.45,57.0,Liver Cells,Transferrin,ASGPR,48.0,3.69e+14,Extrusion,6.8,276.9,Yes,0.423
+LNP-00016,Exosomes,147.77,0.247,-2.7,70.5,68.6,47.5,166.03,68597.79,4.34,41.9,Spleen,Transferrin,HER2,37.0,9.02e+14,Ethanol injection,7.1,334.1,Yes,0.205
+LNP-00017,DNA Origami,78.79,0.127,16.2,79.6,71.6,20.5,83.77,19500.35,4.22,40.1,Spleen,Transferrin,Folate Receptor,63.2,7.15e+14,Microfluidic,7.2,254.0,Yes,0.4376
+LNP-00018,Liposomes,181.99,0.237,1.8,72.2,80.6,23.4,203.53,104045.73,1.94,20.9,Immune Cells,Antibody,ASGPR,55.3,4.06e+14,Spontaneous emission,7.2,346.2,Yes,0.4652
+LNP-00019,Exosomes,101.13,0.195,4.0,69.1,79.7,44.6,110.99,32132.13,1.72,38.9,Liver Cells,Folate,EGFR,38.2,2.51e+14,Sonication,7.4,302.7,Yes,0.4195
+LNP-00020,Exosomes,100.8,0.22,5.6,59.4,67.1,32.1,111.91,31920.99,2.6,35.9,Immune Cells,Aptamer,LDLR,40.3,6.90e+14,Ethanol injection,6.9,295.9,Yes,0.0094
+LNP-00021,Lipid NP (LNP),147.59,0.203,-14.0,94.1,88.8,36.8,162.59,68432.46,3.16,44.9,Lung Cells,PEG,Folate Receptor,59.5,4.54e+14,Ethanol injection,7.3,270.0,Yes,0.1565
+LNP-00022,PLGA,276.83,0.322,-15.5,71.9,70.5,52.4,321.46,240763.65,4.17,52.8,Lung Cells,GalNAc,Folate Receptor,34.2,2.55e+14,Extrusion,7.0,250.4,Yes,0.099
+LNP-00023,DNA Origami,77.79,0.121,17.4,82.8,76.7,18.9,82.48,19008.5,2.34,30.6,Lung Cells,Transferrin,Folate Receptor,67.1,9.03e+14,Spontaneous emission,7.0,274.0,Yes,0.3558
+LNP-00024,DNA Origami,68.09,0.141,16.2,76.6,84.6,19.0,72.89,14566.95,3.59,59.2,Tumor Cells,Transferrin,EGFR,62.1,2.07e+14,Microfluidic,7.2,334.1,Yes,0.2957
+LNP-00025,Lipid NP (LNP),147.93,0.109,-11.0,86.0,90.8,39.2,156.0,68748.74,2.88,34.0,Immune Cells,Antibody,EGFR,52.3,4.08e+14,Spontaneous emission,7.4,285.6,Yes,0.4304
+LNP-00026,Liposomes,198.24,0.178,1.1,65.7,68.0,44.4,215.87,123460.34,2.79,25.9,Neurons,Antibody,HER2,36.5,9.53e+14,Extrusion,7.0,263.3,Yes,0.3646
+LNP-00027,Exosomes,179.52,0.172,1.9,69.1,71.6,47.2,194.93,101242.7,2.96,23.0,Tumor Cells,Folate,HER2,36.5,1.74e+14,Sonication,7.0,313.4,Yes,0.0107
+LNP-00028,DNA Origami,99.12,0.164,12.4,82.9,71.1,15.0,107.25,30863.48,2.21,31.0,Spleen,Aptamer,TLR,70.5,7.36e+14,Sonication,7.2,293.6,Yes,0.1628
+LNP-00029,Lipid NP (LNP),90.55,0.106,-12.8,88.9,86.2,39.1,95.35,25760.96,1.56,38.4,Lung Cells,GalNAc,Folate Receptor,54.1,1.09e+14,Ethanol injection,6.8,319.6,Yes,0.0363
+LNP-00030,Lipid NP (LNP),77.71,0.241,-11.1,91.1,91.0,29.4,87.09,18972.09,2.77,58.7,Neurons,Transferrin,ASGPR,64.4,4.02e+14,Spontaneous emission,7.1,278.2,Yes,0.1979
+LNP-00031,Liposomes,185.28,0.241,1.2,61.3,71.3,34.3,207.6,107849.42,4.32,23.1,Tumor Cells,GalNAc,Folate Receptor,40.3,8.11e+13,Ethanol injection,7.1,343.8,Yes,0.3783
+LNP-00032,Exosomes,181.51,0.209,-0.6,75.7,68.4,21.5,200.46,103499.29,1.58,51.7,Spleen,Transferrin,Folate Receptor,59.4,6.48e+13,Sonication,7.1,323.2,Yes,0.339
+LNP-00033,PLGA,198.93,0.309,-11.6,66.5,70.7,52.4,229.71,124327.57,2.28,105.8,Tumor Cells,GalNAc,Folate Receptor,31.6,7.51e+14,Extrusion,7.1,250.1,Yes,0.3085
+LNP-00034,PLGA,143.89,0.309,-8.0,61.3,70.4,45.6,166.13,65044.33,2.99,69.5,Spleen,Antibody,LDLR,33.3,7.66e+14,Microfluidic,7.3,269.4,Yes,0.1891
+LNP-00035,Lipid NP (LNP),144.54,0.213,-11.1,79.1,84.6,16.3,159.92,65635.75,3.28,51.9,Immune Cells,Aptamer,TLR,66.2,6.99e+12,Sonication,6.9,333.4,Yes,0.3542
+LNP-00036,Lipid NP (LNP),124.86,0.189,-6.6,75.8,82.4,17.8,136.69,48981.25,3.57,35.4,Neurons,GalNAc,LDLR,62.3,1.77e+14,Ethanol injection,7.1,344.9,Yes,0.1024
+LNP-00037,Lipid NP (LNP),121.25,0.114,-6.9,84.9,78.5,30.9,128.13,46182.49,2.21,55.1,Spleen,Aptamer,LDLR,58.7,8.66e+13,Spontaneous emission,7.0,301.1,Yes,0.0369
+LNP-00038,Lipid NP (LNP),120.74,0.127,-6.7,92.4,78.2,17.4,128.38,45796.31,3.82,35.8,Lung Cells,Antibody,ASGPR,76.3,4.30e+14,Spontaneous emission,7.1,289.1,Yes,0.0244
+LNP-00039,PLGA,251.61,0.304,-19.4,75.9,73.1,37.4,289.9,198879.61,3.22,38.6,Tumor Cells,Aptamer,Folate Receptor,47.5,1.13e+14,Ethanol injection,6.8,290.6,Yes,0.3867
+LNP-00040,Lipid NP (LNP),139.93,0.162,-5.1,88.7,87.5,30.3,151.27,61509.45,1.54,34.6,Spleen,Antibody,Folate Receptor,61.9,7.12e+14,Spontaneous emission,7.3,343.0,Yes,0.1322
+LNP-00041,Lipid NP (LNP),99.78,0.226,-10.4,80.0,92.5,15.3,111.04,31276.85,1.6,45.7,Immune Cells,GalNAc,TLR,67.8,9.85e+14,Microfluidic,7.3,328.0,Yes,0.4933
+LNP-00042,Lipid NP (LNP),127.76,0.205,-12.4,84.6,93.7,37.5,140.83,51280.37,3.82,28.2,Neurons,Transferrin,ASGPR,52.9,5.38e+14,Extrusion,7.3,338.1,Yes,0.2971
+LNP-00043,DNA Origami,76.85,0.112,-1.8,74.8,84.3,28.2,81.14,18554.92,2.13,40.9,Neurons,Antibody,EGFR,53.7,5.96e+14,Microfluidic,6.8,259.3,Yes,0.4428
+LNP-00044,PLGA,203.15,0.31,-11.7,65.2,75.5,37.5,234.64,129653.07,3.33,109.8,Neurons,Antibody,LDLR,40.7,8.04e+14,Ethanol injection,7.2,343.5,Yes,0.038
+LNP-00045,Liposomes,84.73,0.281,1.4,55.6,79.9,27.2,96.65,22553.97,3.98,59.1,Immune Cells,Aptamer,HER2,40.5,8.44e+14,Spontaneous emission,6.8,276.6,Yes,0.3182
+LNP-00046,Lipid NP (LNP),139.35,0.152,-14.0,83.4,76.4,33.0,149.92,61006.4,2.4,20.0,Lung Cells,Antibody,EGFR,55.9,6.55e+14,Spontaneous emission,6.9,298.2,Yes,0.3062
+LNP-00047,DNA Origami,78.01,0.18,-1.2,79.5,87.4,32.6,85.01,19116.7,2.6,57.0,Immune Cells,Antibody,Folate Receptor,53.6,6.30e+14,Microfluidic,7.1,270.0,Yes,0.2811
+LNP-00048,PLGA,143.86,0.334,-15.1,72.3,75.8,42.9,167.91,65020.17,3.52,76.8,Liver Cells,Antibody,EGFR,41.3,2.59e+14,Sonication,6.8,285.8,Yes,0.2265
+LNP-00049,Liposomes,155.43,0.174,8.1,60.7,71.4,22.2,168.94,75893.83,2.58,46.7,Spleen,Transferrin,Folate Receptor,47.2,6.71e+14,Microfluidic,7.3,277.3,Yes,0.3326
+LNP-00050,Liposomes,166.02,0.155,0.5,71.0,67.7,20.9,178.91,86591.46,2.89,40.5,Immune Cells,Aptamer,LDLR,56.2,5.86e+14,Ethanol injection,6.8,291.0,Yes,0.1097
+LNP-00051,PLGA,299.84,0.314,-8.5,61.5,65.0,53.4,346.98,282445.95,2.37,95.4,Tumor Cells,Transferrin,Folate Receptor,28.7,1.44e+14,Extrusion,7.2,303.4,Yes,0.2185
+LNP-00052,PLGA,284.54,0.159,-15.0,79.3,64.9,43.2,307.22,254345.19,1.85,49.2,Spleen,GalNAc,LDLR,45.0,6.37e+14,Extrusion,7.2,315.4,Yes,0.1062
+LNP-00053,Liposomes,113.82,0.293,-6.0,55.2,87.8,34.1,130.48,40695.85,3.29,29.9,Immune Cells,GalNAc,Folate Receptor,36.4,6.71e+14,Spontaneous emission,7.1,253.8,Yes,0.3087
+LNP-00054,Exosomes,88.41,0.236,4.5,71.0,76.4,21.2,98.84,24558.23,4.12,53.6,Tumor Cells,PEG,HER2,56.0,1.97e+14,Ethanol injection,7.0,293.3,Yes,0.4252
+LNP-00055,Lipid NP (LNP),136.63,0.218,-13.6,83.9,88.7,36.2,151.54,58643.66,3.25,59.2,Spleen,GalNAc,LDLR,53.5,6.70e+14,Sonication,6.9,341.0,Yes,0.4804
+LNP-00056,PLGA,253.05,0.152,-14.2,69.4,63.1,35.9,272.34,201172.77,4.38,32.1,Immune Cells,Antibody,HER2,44.4,6.28e+14,Spontaneous emission,7.1,287.3,Yes,0.4196
+LNP-00057,Exosomes,138.58,0.242,6.8,73.9,86.9,42.8,155.34,60333.92,2.56,40.2,Spleen,Aptamer,LDLR,42.2,2.07e+14,Microfluidic,7.0,299.4,No,0.2567
+LNP-00058,Exosomes,118.64,0.127,-8.6,71.0,72.0,23.3,126.17,44216.27,1.55,25.7,Immune Cells,Antibody,ASGPR,54.4,1.92e+14,Spontaneous emission,6.8,304.5,Yes,0.2082
+LNP-00059,DNA Origami,61.63,0.13,5.5,89.3,79.3,28.6,65.62,11933.71,3.21,53.9,Immune Cells,Transferrin,Folate Receptor,63.8,7.84e+14,Sonication,7.4,301.8,Yes,0.3255
+LNP-00060,PLGA,271.82,0.294,-18.8,81.8,76.6,31.7,311.81,232121.19,3.97,68.8,Neurons,PEG,Folate Receptor,55.8,1.51e+14,Microfluidic,7.3,321.3,Yes,0.4681
+LNP-00061,Liposomes,83.81,0.18,-6.7,53.9,77.3,47.1,91.36,22067.32,4.4,49.2,Liver Cells,PEG,LDLR,28.5,9.95e+14,Spontaneous emission,6.9,291.0,Yes,0.0374
+LNP-00062,PLGA,211.27,0.24,-15.4,78.7,82.5,44.5,236.65,140220.23,3.25,96.1,Spleen,Transferrin,EGFR,43.7,6.55e+14,Ethanol injection,7.2,320.8,Yes,0.0309
+LNP-00063,Exosomes,175.79,0.198,-4.5,57.3,77.8,20.8,193.15,97077.53,4.21,29.4,Tumor Cells,Antibody,LDLR,45.4,3.64e+14,Extrusion,6.9,291.9,Yes,0.3759
+LNP-00064,Exosomes,162.7,0.217,0.3,75.4,70.0,25.8,180.38,83163.09,3.6,43.3,Neurons,Antibody,Folate Receptor,55.9,3.79e+14,Ethanol injection,7.0,315.8,Yes,0.2125
+LNP-00065,DNA Origami,106.08,0.186,-0.8,71.4,79.7,14.0,115.96,35351.73,2.67,45.4,Spleen,GalNAc,HER2,61.4,1.59e+14,Extrusion,7.2,312.7,Yes,0.2405
+LNP-00066,DNA Origami,57.18,0.158,15.7,77.0,81.2,27.1,61.69,10270.48,2.9,45.0,Immune Cells,GalNAc,ASGPR,56.1,6.13e+14,Sonication,7.3,283.7,Yes,0.0917
+LNP-00067,Lipid NP (LNP),71.17,0.111,-10.5,77.1,87.4,37.1,75.12,15913.57,2.86,28.5,Tumor Cells,Transferrin,EGFR,48.5,9.43e+14,Ethanol injection,6.9,346.8,Yes,0.1013
+LNP-00068,Exosomes,191.82,0.13,-3.4,68.3,66.1,22.1,204.24,115589.66,1.68,31.2,Neurons,Transferrin,TLR,53.2,8.64e+14,Spontaneous emission,7.0,316.4,Yes,0.1673
+LNP-00069,Lipid NP (LNP),78.47,0.122,-13.4,80.7,84.1,15.6,83.24,19343.96,2.06,38.2,Liver Cells,Folate,HER2,68.1,4.99e+14,Extrusion,7.0,293.8,Yes,0.2497
+LNP-00070,Liposomes,127.75,0.277,-2.6,50.7,84.1,29.8,145.45,51270.38,3.93,35.0,Neurons,Antibody,LDLR,35.6,4.57e+14,Extrusion,6.8,305.9,Yes,0.2556
+LNP-00071,Exosomes,128.98,0.179,3.8,55.0,73.8,29.5,140.52,52259.83,4.42,52.4,Lung Cells,GalNAc,LDLR,38.8,2.37e+13,Microfluidic,7.3,339.0,Yes,0.0288
+LNP-00072,PLGA,169.25,0.198,-17.5,76.9,69.5,36.7,186.02,89989.97,1.66,85.1,Liver Cells,Aptamer,EGFR,48.7,7.76e+14,Sonication,6.8,340.7,Yes,0.2462
+LNP-00073,PLGA,132.68,0.276,-19.1,70.5,83.4,52.1,150.97,55304.12,4.37,21.1,Spleen,Transferrin,EGFR,33.7,5.31e+13,Sonication,7.2,313.7,Yes,0.4861
+LNP-00074,Lipid NP (LNP),145.03,0.116,-6.6,75.2,93.0,24.4,153.44,66079.68,2.18,34.8,Immune Cells,GalNAc,EGFR,56.9,1.41e+14,Extrusion,6.8,339.6,Yes,0.2521
+LNP-00075,Exosomes,158.27,0.144,8.3,59.9,68.6,35.8,169.69,78690.78,3.26,20.6,Neurons,Antibody,LDLR,38.5,1.63e+13,Spontaneous emission,7.0,278.8,Yes,0.3906
+LNP-00076,Liposomes,189.16,0.178,3.5,65.5,85.7,45.7,205.98,112409.28,4.47,55.5,Liver Cells,PEG,LDLR,35.6,4.02e+14,Microfluidic,7.4,270.5,Yes,0.0296
+LNP-00077,PLGA,218.19,0.222,-17.0,61.1,73.5,32.2,242.41,149557.5,2.04,87.3,Spleen,Antibody,HER2,41.4,9.21e+14,Microfluidic,6.9,253.3,Yes,0.0758
+LNP-00078,DNA Origami,73.93,0.181,19.1,75.9,88.8,19.7,80.63,17172.46,2.62,52.1,Immune Cells,Antibody,ASGPR,60.9,6.16e+14,Spontaneous emission,7.0,307.8,Yes,0.3754
+LNP-00079,Exosomes,168.27,0.236,-1.3,78.6,79.9,26.8,188.15,88956.38,3.23,43.0,Liver Cells,Transferrin,ASGPR,57.6,1.72e+14,Ethanol injection,7.3,256.1,Yes,0.074
+LNP-00080,Exosomes,143.36,0.124,5.8,69.9,72.5,27.4,152.25,64564.6,2.48,58.2,Tumor Cells,PEG,Folate Receptor,50.7,7.35e+14,Spontaneous emission,7.3,320.3,Yes,0.115
+LNP-00081,PLGA,216.04,0.276,-15.2,61.2,71.5,43.2,245.82,146628.79,3.66,114.9,Neurons,Antibody,TLR,34.8,5.14e+14,Sonication,6.8,336.3,Yes,0.049
+LNP-00082,Exosomes,161.59,0.135,4.7,51.4,71.3,23.3,172.52,82032.6,1.59,48.2,Lung Cells,Folate,TLR,39.4,2.55e+14,Extrusion,6.9,279.2,Yes,0.1628
+LNP-00083,Lipid NP (LNP),113.52,0.247,-6.2,76.3,90.9,32.5,127.53,40487.52,4.44,59.3,Liver Cells,Folate,TLR,51.5,5.60e+14,Extrusion,7.3,274.9,No,0.0047
+LNP-00084,Liposomes,158.5,0.193,-8.3,55.3,71.3,28.2,173.77,78928.19,4.12,59.8,Lung Cells,Aptamer,TLR,39.7,7.07e+14,Spontaneous emission,7.0,276.0,Yes,0.3229
+LNP-00085,DNA Origami,107.15,0.155,0.2,79.8,88.5,10.2,115.44,36066.99,3.96,34.4,Liver Cells,Antibody,LDLR,71.6,8.09e+14,Spontaneous emission,6.9,314.9,Yes,0.3125
+LNP-00086,Lipid NP (LNP),114.57,0.144,-11.7,76.3,86.4,16.1,122.81,41235.58,4.43,37.3,Liver Cells,Folate,EGFR,64.0,7.50e+14,Spontaneous emission,7.1,289.0,Yes,0.2046
+LNP-00087,DNA Origami,94.55,0.098,13.2,73.2,85.1,11.0,99.2,28084.61,1.72,34.3,Neurons,PEG,LDLR,65.2,7.44e+14,Extrusion,7.3,340.8,Yes,0.0426
+LNP-00088,Lipid NP (LNP),113.83,0.213,-12.3,75.9,85.3,23.0,125.96,40703.12,3.23,52.0,Spleen,Aptamer,Folate Receptor,58.4,2.48e+14,Extrusion,7.3,346.8,Yes,0.2878
+LNP-00089,Lipid NP (LNP),143.75,0.247,-9.0,89.2,90.5,20.4,161.53,64916.63,3.31,28.7,Spleen,GalNAc,Folate Receptor,71.0,1.62e+14,Extrusion,7.3,279.1,No,0.4451
+LNP-00090,Exosomes,195.79,0.188,-7.9,69.4,78.8,42.2,214.2,120427.62,2.35,21.1,Liver Cells,Transferrin,Folate Receptor,40.1,2.03e+14,Microfluidic,7.0,338.2,Yes,0.3518
+LNP-00091,Lipid NP (LNP),105.39,0.193,-14.5,92.3,86.1,22.7,115.53,34891.75,2.94,27.2,Tumor Cells,PEG,LDLR,71.3,2.70e+14,Spontaneous emission,7.2,313.3,Yes,0.0474
+LNP-00092,Lipid NP (LNP),87.45,0.136,-14.8,94.9,87.7,27.3,93.41,24025.12,1.91,53.0,Lung Cells,PEG,Folate Receptor,69.0,7.35e+14,Ethanol injection,7.1,299.7,Yes,0.403
+LNP-00093,DNA Origami,68.43,0.132,6.6,70.1,79.0,12.7,72.94,14710.35,1.68,51.0,Neurons,Antibody,TLR,61.2,9.58e+14,Sonication,7.1,340.0,Yes,0.2422
+LNP-00094,Liposomes,144.0,0.201,8.8,62.0,78.3,27.4,158.44,65145.21,3.85,41.1,Lung Cells,Aptamer,TLR,45.0,2.80e+13,Ethanol injection,7.2,335.3,Yes,0.1381
+LNP-00095,DNA Origami,113.15,0.151,5.9,75.8,70.4,26.6,121.71,40223.62,3.81,24.9,Liver Cells,Antibody,EGFR,55.7,5.48e+13,Sonication,7.0,319.6,Yes,0.4956
+LNP-00096,Liposomes,166.23,0.138,0.7,69.5,83.8,29.8,177.73,86812.27,2.31,38.2,Lung Cells,Antibody,HER2,48.8,7.95e+14,Ethanol injection,7.1,336.4,Yes,0.0612
+LNP-00097,Liposomes,188.31,0.229,10.0,76.2,71.1,23.6,209.85,111402.94,3.04,45.7,Immune Cells,Transferrin,Folate Receptor,58.2,9.91e+14,Sonication,7.1,276.5,Yes,0.3797
+LNP-00098,Lipid NP (LNP),143.99,0.102,-7.8,85.4,87.5,19.3,151.32,65133.52,1.68,33.7,Lung Cells,PEG,Folate Receptor,68.9,6.03e+14,Sonication,6.9,315.8,Yes,0.3969
+LNP-00099,Lipid NP (LNP),118.11,0.156,-5.1,82.4,79.7,36.0,127.33,43826.18,3.36,51.6,Tumor Cells,Transferrin,HER2,52.7,9.29e+14,Extrusion,7.3,253.7,Yes,0.3243
+LNP-00100,DNA Origami,91.04,0.16,9.8,80.8,86.1,22.8,98.31,26038.79,3.53,26.7,Immune Cells,PEG,Folate Receptor,62.4,5.48e+14,Sonication,7.1,294.6,Yes,0.0552
+LNP-00101,PLGA,149.86,0.31,-17.3,68.1,70.5,50.9,173.07,70552.67,3.2,104.1,Neurons,Folate,Folate Receptor,33.4,8.58e+14,Extrusion,7.2,250.7,Yes,0.427
+LNP-00102,Liposomes,119.19,0.215,-4.3,65.4,80.1,23.7,132.02,44631.94,2.68,30.9,Liver Cells,PEG,Folate Receptor,49.9,7.45e+14,Ethanol injection,7.2,335.5,Yes,0.3091
+LNP-00103,Lipid NP (LNP),79.12,0.124,-7.4,80.2,91.8,31.7,84.01,19666.38,4.19,35.9,Liver Cells,GalNAc,TLR,54.8,2.12e+14,Spontaneous emission,7.3,344.6,Yes,0.2587
+LNP-00104,Exosomes,104.79,0.298,-4.5,67.1,70.8,20.9,120.43,34499.02,3.43,30.4,Lung Cells,Folate,LDLR,53.1,6.41e+13,Microfluidic,7.2,338.6,Yes,0.489
+LNP-00105,Exosomes,80.84,0.135,6.1,53.3,78.2,38.6,86.31,20532.56,3.39,54.7,Tumor Cells,PEG,Folate Receptor,32.7,8.99e+14,Sonication,7.4,274.7,Yes,0.3626
+LNP-00106,PLGA,271.78,0.324,-19.5,61.7,76.8,52.6,315.83,232048.87,4.3,93.9,Tumor Cells,Antibody,LDLR,29.2,7.20e+12,Extrusion,6.9,335.1,Yes,0.422
+LNP-00107,Lipid NP (LNP),86.9,0.143,-14.2,80.5,94.1,17.8,93.14,23724.3,4.34,50.1,Immune Cells,PEG,LDLR,66.2,4.95e+14,Spontaneous emission,7.3,260.7,Yes,0.4584
+LNP-00108,DNA Origami,68.8,0.166,-0.7,81.4,78.0,13.2,74.51,14871.92,2.57,46.2,Tumor Cells,PEG,TLR,70.6,7.97e+14,Sonication,7.3,349.3,Yes,0.3936
+LNP-00109,PLGA,271.31,0.158,-13.9,75.3,67.8,45.9,292.78,231254.42,3.68,102.4,Neurons,Transferrin,LDLR,40.7,5.87e+14,Spontaneous emission,6.8,349.9,No,0.4428
+LNP-00110,Lipid NP (LNP),149.79,0.128,-10.7,90.9,83.4,21.3,159.39,70488.79,2.62,22.6,Spleen,Aptamer,HER2,71.5,7.51e+14,Ethanol injection,7.0,285.0,Yes,0.0103
+LNP-00111,Liposomes,143.46,0.282,-5.9,69.5,71.8,44.5,163.71,64656.5,2.76,58.2,Spleen,Aptamer,EGFR,38.6,2.53e+14,Sonication,7.2,265.1,Yes,0.1322
+LNP-00112,PLGA,254.29,0.317,-16.7,78.3,69.1,38.6,294.64,203150.03,2.06,22.9,Lung Cells,Aptamer,EGFR,48.1,4.17e+13,Microfluidic,6.8,313.3,Yes,0.1931
+LNP-00113,PLGA,274.66,0.21,-11.3,61.2,72.1,37.5,303.57,237003.22,1.81,75.9,Immune Cells,Antibody,EGFR,38.2,1.09e+14,Ethanol injection,7.3,323.0,Yes,0.2911
+LNP-00114,Lipid NP (LNP),96.58,0.223,-14.2,91.5,84.4,15.8,107.33,29305.46,1.68,25.0,Lung Cells,Antibody,HER2,77.0,4.48e+14,Spontaneous emission,7.2,295.0,Yes,0.4795
+LNP-00115,Exosomes,114.78,0.188,1.4,75.5,82.8,29.7,125.57,41390.79,3.74,24.0,Lung Cells,Transferrin,HER2,53.1,9.36e+14,Extrusion,7.4,284.2,Yes,0.4788
+LNP-00116,DNA Origami,89.94,0.12,12.0,76.7,84.1,21.1,95.34,25414.61,2.95,24.9,Lung Cells,GalNAc,Folate Receptor,60.5,6.06e+14,Ethanol injection,7.3,257.3,Yes,0.4105
+LNP-00117,DNA Origami,111.95,0.106,5.9,89.7,80.8,29.5,117.91,39373.1,3.05,51.2,Neurons,Transferrin,ASGPR,63.2,3.28e+14,Extrusion,7.3,279.8,Yes,0.1407
+LNP-00118,DNA Origami,97.59,0.192,9.5,72.4,74.3,20.2,106.97,29919.0,4.21,48.2,Spleen,Folate,HER2,57.8,8.51e+12,Microfluidic,7.2,253.3,Yes,0.2072
+LNP-00119,Exosomes,88.91,0.226,2.8,57.8,85.3,21.3,98.97,24834.34,4.32,34.3,Spleen,GalNAc,Folate Receptor,45.5,5.58e+14,Extrusion,7.2,271.8,Yes,0.0673
+LNP-00120,DNA Origami,97.4,0.189,19.1,79.7,71.2,19.5,106.62,29801.46,4.1,52.6,Tumor Cells,Transferrin,Folate Receptor,64.2,5.93e+14,Microfluidic,7.3,342.5,Yes,0.3384
+LNP-00121,DNA Origami,104.96,0.19,5.4,88.7,71.7,22.9,114.91,34612.25,3.16,23.9,Neurons,Aptamer,TLR,68.4,6.19e+14,Ethanol injection,7.0,282.5,Yes,0.2858
+LNP-00122,Liposomes,197.13,0.241,6.4,66.5,74.0,37.2,220.86,122087.63,1.96,30.2,Liver Cells,Antibody,HER2,41.8,8.19e+14,Ethanol injection,7.4,276.9,Yes,0.1366
+LNP-00123,PLGA,158.83,0.289,-13.4,76.9,78.2,34.4,181.8,79250.97,3.19,25.4,Lung Cells,Folate,EGFR,50.4,9.47e+13,Spontaneous emission,7.0,296.4,Yes,0.2883
+LNP-00124,PLGA,190.61,0.32,-12.1,74.9,77.6,51.1,221.13,114137.33,3.24,35.1,Liver Cells,Aptamer,EGFR,36.6,3.57e+14,Extrusion,7.2,312.2,Yes,0.1216
+LNP-00125,PLGA,278.81,0.242,-18.6,74.3,81.5,52.6,312.51,244208.65,2.8,48.4,Liver Cells,Folate,Folate Receptor,35.2,2.03e+14,Sonication,6.8,345.1,Yes,0.0915
+LNP-00126,DNA Origami,70.23,0.173,17.7,76.0,77.6,29.8,76.29,15496.53,3.4,23.6,Neurons,PEG,EGFR,53.4,8.17e+14,Microfluidic,7.2,346.6,Yes,0.2855
+LNP-00127,Exosomes,112.83,0.17,-9.1,64.1,83.4,38.5,122.42,39993.36,2.96,20.7,Tumor Cells,GalNAc,HER2,39.4,7.08e+14,Ethanol injection,6.9,280.8,Yes,0.361
+LNP-00128,PLGA,130.45,0.257,-17.6,77.3,60.7,51.8,147.19,53463.94,2.22,118.4,Liver Cells,Aptamer,LDLR,37.3,6.54e+14,Sonication,6.8,300.7,Yes,0.1154
+LNP-00129,PLGA,136.13,0.218,-13.0,76.6,67.1,51.4,150.97,58219.57,2.06,18.0,Liver Cells,Transferrin,Folate Receptor,37.3,4.60e+14,Extrusion,7.2,262.7,Yes,0.3263
+LNP-00130,Lipid NP (LNP),142.68,0.203,-6.9,85.1,80.8,36.8,157.14,63951.16,4.42,45.1,Spleen,Aptamer,Folate Receptor,53.7,8.78e+14,Ethanol injection,7.1,281.8,No,0.0487
+LNP-00131,PLGA,250.02,0.272,-10.0,63.9,74.8,45.3,284.05,196386.83,3.07,98.8,Lung Cells,Antibody,HER2,35.0,6.17e+14,Spontaneous emission,7.4,295.7,Yes,0.1
+LNP-00132,Exosomes,131.2,0.186,2.0,55.5,73.7,37.0,143.41,54078.77,4.37,57.1,Lung Cells,Aptamer,LDLR,35.0,6.89e+14,Microfluidic,7.0,300.8,Yes,0.3491
+LNP-00133,Exosomes,108.05,0.224,-1.7,62.1,65.6,38.7,120.14,36674.51,1.63,52.5,Liver Cells,PEG,EGFR,38.1,5.99e+14,Ethanol injection,7.1,325.1,Yes,0.4962
+LNP-00134,PLGA,261.92,0.282,-19.1,63.4,72.9,33.6,298.87,215518.77,1.76,56.3,Neurons,PEG,LDLR,42.1,5.74e+14,Microfluidic,6.9,345.7,Yes,0.0999
+LNP-00135,DNA Origami,63.9,0.167,17.7,70.4,72.7,20.7,69.23,12828.85,1.74,20.1,Lung Cells,Transferrin,EGFR,55.8,3.99e+14,Spontaneous emission,7.1,332.2,Yes,0.1229
+LNP-00136,PLGA,167.91,0.18,-17.7,84.4,67.5,40.8,183.02,88575.55,4.37,66.4,Lung Cells,PEG,EGFR,50.0,3.14e+14,Extrusion,6.9,266.8,Yes,0.4915
+LNP-00137,Lipid NP (LNP),83.3,0.132,-12.2,80.3,76.1,21.0,88.81,21796.98,2.0,53.1,Lung Cells,PEG,TLR,63.4,2.31e+14,Ethanol injection,6.9,311.2,Yes,0.1847
+LNP-00138,Lipid NP (LNP),107.56,0.107,-10.2,87.4,93.9,16.9,113.34,36347.2,3.97,46.1,Immune Cells,GalNAc,TLR,72.7,7.10e+13,Extrusion,6.8,294.8,Yes,0.3317
+LNP-00139,Exosomes,127.29,0.143,-2.0,58.3,80.1,26.3,136.4,50900.22,1.94,39.7,Liver Cells,PEG,HER2,43.0,3.68e+14,Spontaneous emission,7.0,333.8,Yes,0.3988
+LNP-00140,Lipid NP (LNP),93.84,0.235,-10.3,87.3,91.6,36.7,104.87,27662.29,1.72,41.0,Spleen,GalNAc,Folate Receptor,55.3,1.46e+14,Microfluidic,7.2,320.6,Yes,0.0788
+LNP-00141,Lipid NP (LNP),113.17,0.223,-14.8,88.6,89.0,30.8,125.78,40232.36,3.93,23.8,Tumor Cells,PEG,TLR,61.3,6.08e+13,Spontaneous emission,6.9,344.4,Yes,0.4401
+LNP-00142,Exosomes,165.81,0.267,-7.4,57.5,87.2,22.7,187.97,86373.08,1.89,20.8,Neurons,Antibody,HER2,44.4,7.83e+14,Extrusion,7.1,306.1,Yes,0.3453
+LNP-00143,Exosomes,128.04,0.282,3.1,76.2,65.3,46.9,146.08,51505.44,2.99,52.5,Liver Cells,Folate,Folate Receptor,40.5,6.35e+14,Sonication,7.0,296.7,Yes,0.3039
+LNP-00144,DNA Origami,97.89,0.188,5.5,78.0,82.8,17.4,107.08,30103.87,4.15,36.9,Lung Cells,Folate,EGFR,64.5,9.34e+14,Ethanol injection,7.0,286.5,Yes,0.2605
+LNP-00145,Lipid NP (LNP),121.7,0.127,-5.3,91.4,88.7,38.0,129.4,46529.97,2.72,34.1,Spleen,PEG,ASGPR,56.7,4.82e+14,Extrusion,7.2,310.6,Yes,0.1992
+LNP-00146,PLGA,163.61,0.318,-18.8,77.6,76.8,35.5,189.6,84094.98,2.91,48.6,Lung Cells,Transferrin,Folate Receptor,50.1,2.54e+14,Spontaneous emission,6.9,293.2,Yes,0.2192
+LNP-00147,PLGA,240.08,0.333,-19.9,63.7,81.7,39.8,280.0,181076.67,2.35,111.6,Immune Cells,Transferrin,TLR,38.4,9.41e+14,Extrusion,7.3,317.9,Yes,0.1694
+LNP-00148,PLGA,239.51,0.211,-14.1,62.7,74.8,36.7,264.74,180215.78,4.18,119.7,Liver Cells,PEG,LDLR,39.7,1.14e+14,Ethanol injection,6.9,301.5,Yes,0.4425
+LNP-00149,Liposomes,83.56,0.182,-8.5,50.1,81.8,47.4,91.15,21936.19,2.66,34.6,Tumor Cells,Folate,EGFR,26.3,2.02e+14,Ethanol injection,6.9,287.2,No,0.3526
+LNP-00150,DNA Origami,113.64,0.148,2.9,86.2,75.3,27.5,122.07,40567.74,3.32,21.2,Spleen,Transferrin,Folate Receptor,62.5,7.08e+14,Ethanol injection,7.2,328.6,Yes,0.0245
+LNP-00151,Exosomes,156.96,0.233,-8.8,54.4,66.0,27.9,175.24,77401.61,2.69,40.5,Neurons,Folate,Folate Receptor,39.2,5.21e+14,Extrusion,7.4,302.9,Yes,0.0218
+LNP-00152,Exosomes,143.21,0.206,-9.6,63.1,75.1,32.8,157.97,64427.87,4.04,25.6,Immune Cells,Folate,HER2,42.4,6.50e+14,Spontaneous emission,7.4,308.5,Yes,0.1693
+LNP-00153,PLGA,192.05,0.305,-9.2,82.5,77.4,47.8,221.38,115866.67,3.18,101.0,Immune Cells,GalNAc,Folate Receptor,43.1,3.00e+14,Microfluidic,6.9,341.0,Yes,0.4884
+LNP-00154,Liposomes,131.86,0.129,6.8,60.7,68.2,31.5,140.4,54625.09,2.76,34.5,Neurons,Antibody,Folate Receptor,41.5,5.97e+14,Extrusion,7.3,254.9,Yes,0.271
+LNP-00155,Lipid NP (LNP),127.31,0.228,-14.5,94.7,89.5,24.6,141.84,50921.67,3.92,20.6,Lung Cells,GalNAc,LDLR,71.4,4.15e+14,Sonication,7.0,321.3,Yes,0.4254
+LNP-00156,DNA Origami,113.87,0.102,8.3,70.0,74.6,19.6,119.69,40737.14,3.65,51.8,Liver Cells,Folate,LDLR,56.3,4.91e+14,Sonication,7.3,290.8,Yes,0.447
+LNP-00157,DNA Origami,59.16,0.159,2.2,87.2,81.0,27.6,63.86,10996.52,2.35,36.4,Neurons,GalNAc,TLR,63.1,8.79e+14,Ethanol injection,7.2,262.0,Yes,0.4606
+LNP-00158,Lipid NP (LNP),133.27,0.172,-11.8,91.9,86.9,26.0,144.7,55798.35,3.48,36.0,Lung Cells,Aptamer,TLR,68.0,1.76e+13,Sonication,7.3,288.6,Yes,0.3607
+LNP-00159,DNA Origami,107.61,0.114,9.8,79.4,88.6,21.0,113.73,36377.03,2.58,48.8,Immune Cells,Folate,EGFR,62.7,1.35e+14,Spontaneous emission,7.2,315.7,Yes,0.0534
+LNP-00160,Lipid NP (LNP),102.18,0.149,-11.3,85.1,81.5,39.1,109.79,32802.62,1.95,29.5,Immune Cells,Antibody,ASGPR,51.9,5.20e+13,Sonication,7.2,293.4,Yes,0.0309
+LNP-00161,DNA Origami,53.31,0.086,-0.7,74.7,80.4,10.6,55.6,8926.98,3.47,54.0,Immune Cells,Aptamer,ASGPR,66.8,1.68e+14,Spontaneous emission,7.2,263.4,Yes,0.1913
+LNP-00162,Exosomes,193.92,0.123,-5.9,72.4,70.4,33.2,205.84,118139.24,1.88,29.8,Spleen,Antibody,Folate Receptor,48.4,3.16e+14,Microfluidic,6.9,325.8,Yes,0.2219
+LNP-00163,Liposomes,93.74,0.274,5.7,69.7,84.1,30.7,106.57,27605.04,4.37,35.2,Spleen,PEG,EGFR,48.3,2.08e+14,Spontaneous emission,6.9,324.2,Yes,0.4752
+LNP-00164,PLGA,272.42,0.344,-13.7,84.0,77.3,34.7,319.31,233140.53,4.01,13.2,Neurons,Transferrin,TLR,54.9,4.18e+14,Microfluidic,7.0,316.6,Yes,0.3508
+LNP-00165,DNA Origami,96.97,0.157,17.5,88.0,86.4,32.3,104.56,29540.42,3.7,36.0,Liver Cells,PEG,LDLR,59.6,7.86e+14,Ethanol injection,7.2,260.1,Yes,0.2627
+LNP-00166,Liposomes,95.05,0.264,2.8,54.8,82.6,39.7,107.59,28383.65,4.49,53.4,Immune Cells,Folate,TLR,33.0,5.36e+14,Sonication,7.3,255.9,Yes,0.1704
+LNP-00167,Exosomes,198.58,0.123,-1.2,53.6,65.0,44.7,210.78,123882.12,2.64,43.9,Immune Cells,PEG,HER2,29.6,6.99e+14,Extrusion,7.3,313.4,Yes,0.0084
+LNP-00168,Exosomes,176.13,0.175,-1.2,72.6,65.3,37.4,191.54,97462.55,2.99,38.5,Lung Cells,Antibody,HER2,45.5,4.18e+14,Spontaneous emission,7.0,332.2,Yes,0.1281
+LNP-00169,DNA Origami,99.02,0.137,-3.2,87.4,80.6,20.8,105.82,30802.1,2.33,25.1,Neurons,Aptamer,HER2,69.2,2.84e+14,Spontaneous emission,7.1,349.2,Yes,0.3543
+LNP-00170,PLGA,171.14,0.284,-10.9,72.4,78.6,30.2,195.47,92013.43,2.34,111.0,Neurons,Antibody,TLR,50.6,2.78e+14,Extrusion,7.1,335.3,Yes,0.2454
+LNP-00171,Lipid NP (LNP),118.62,0.117,-6.6,77.7,78.7,23.0,125.55,44204.63,3.91,34.8,Immune Cells,Folate,ASGPR,59.8,9.78e+14,Spontaneous emission,6.9,276.2,Yes,0.4931
+LNP-00172,Liposomes,86.43,0.161,-5.7,57.7,81.1,28.6,93.41,23470.52,4.11,20.8,Tumor Cells,Folate,HER2,41.2,4.69e+14,Sonication,7.3,271.3,Yes,0.0157
+LNP-00173,PLGA,174.72,0.268,-11.6,62.9,66.5,38.7,198.1,95907.74,2.49,28.1,Spleen,GalNAc,EGFR,38.5,5.23e+14,Spontaneous emission,7.2,306.2,Yes,0.3126
+LNP-00174,Exosomes,126.28,0.206,-0.6,58.3,69.4,30.3,139.26,50097.58,3.66,37.0,Spleen,Antibody,HER2,40.6,5.10e+14,Extrusion,7.2,286.5,Yes,0.4624
+LNP-00175,PLGA,190.67,0.26,-15.1,83.2,77.2,40.8,215.41,114210.23,1.65,99.0,Immune Cells,GalNAc,LDLR,49.2,2.63e+14,Extrusion,7.3,343.5,Yes,0.4369
+LNP-00176,DNA Origami,59.2,0.124,10.5,76.5,89.7,25.8,62.87,11010.43,1.97,27.2,Tumor Cells,Folate,TLR,56.7,7.72e+14,Microfluidic,7.2,259.4,Yes,0.2514
+LNP-00177,PLGA,207.93,0.297,-13.0,80.8,84.0,35.6,238.78,135826.94,3.51,10.1,Spleen,Transferrin,HER2,52.0,1.50e+14,Extrusion,7.0,324.0,Yes,0.1123
+LNP-00178,Exosomes,100.41,0.225,-5.9,56.5,77.3,47.3,111.71,31675.54,2.43,28.5,Tumor Cells,Aptamer,ASGPR,29.7,6.01e+14,Sonication,7.0,344.6,Yes,0.3203
+LNP-00179,Liposomes,80.74,0.133,9.6,71.1,69.4,21.7,86.1,20481.77,4.02,29.5,Neurons,Folate,Folate Receptor,55.7,1.46e+14,Sonication,7.1,327.9,No,0.0494
+LNP-00180,Exosomes,84.56,0.265,2.5,65.7,79.0,47.3,95.77,22461.08,1.58,52.6,Tumor Cells,GalNAc,Folate Receptor,34.6,5.54e+14,Extrusion,7.1,301.7,Yes,0.0043
+LNP-00181,DNA Origami,85.51,0.198,-3.7,79.5,84.0,31.3,93.99,22971.74,3.81,59.4,Spleen,Folate,EGFR,54.6,1.57e+14,Spontaneous emission,6.8,253.1,Yes,0.0775
+LNP-00182,DNA Origami,112.88,0.149,6.0,76.4,77.0,25.9,121.32,40031.21,4.34,32.3,Lung Cells,GalNAc,LDLR,56.6,1.73e+14,Spontaneous emission,6.9,312.8,Yes,0.2218
+LNP-00183,PLGA,185.93,0.314,-18.9,66.8,82.0,35.3,215.15,108604.95,4.09,20.8,Lung Cells,Transferrin,HER2,43.2,3.08e+14,Ethanol injection,7.3,346.6,Yes,0.3329
+LNP-00184,Exosomes,143.59,0.201,3.3,55.2,70.0,49.5,158.05,64776.23,4.07,38.1,Spleen,PEG,ASGPR,27.9,8.79e+14,Spontaneous emission,6.8,263.7,Yes,0.1967
+LNP-00185,Liposomes,167.43,0.228,7.9,77.6,80.3,49.8,186.5,88072.58,3.45,48.8,Immune Cells,PEG,TLR,39.0,1.15e+14,Microfluidic,7.1,279.9,Yes,0.2601
+LNP-00186,PLGA,142.15,0.192,-13.5,70.0,78.4,37.7,155.76,63481.2,3.49,10.5,Neurons,Transferrin,EGFR,43.7,5.76e+14,Sonication,6.9,303.9,Yes,0.074
+LNP-00187,Liposomes,124.32,0.279,-2.7,69.8,79.6,28.3,141.69,48558.39,3.98,51.2,Spleen,Folate,TLR,50.0,6.93e+14,Spontaneous emission,7.2,311.0,Yes,0.0412
+LNP-00188,Lipid NP (LNP),121.02,0.216,-7.4,81.9,75.6,28.5,134.11,46013.63,3.23,34.2,Immune Cells,GalNAc,ASGPR,58.6,8.01e+14,Microfluidic,6.8,319.5,Yes,0.1736
+LNP-00189,Liposomes,140.16,0.283,8.2,51.3,78.2,28.6,159.99,61719.65,2.66,34.0,Spleen,Aptamer,EGFR,36.6,3.54e+14,Spontaneous emission,6.8,280.8,Yes,0.3088
+LNP-00190,Liposomes,152.49,0.164,2.0,67.9,72.3,43.7,164.96,73048.99,1.94,34.3,Tumor Cells,Folate,HER2,38.2,4.40e+14,Microfluidic,7.2,267.3,Yes,0.1963
+LNP-00191,Liposomes,95.4,0.181,0.7,74.4,81.7,36.8,104.04,28591.22,3.6,39.6,Lung Cells,Transferrin,Folate Receptor,47.0,3.27e+14,Extrusion,7.3,339.8,Yes,0.0649
+LNP-00192,Liposomes,90.6,0.205,5.4,68.2,86.9,23.2,99.9,25786.59,2.27,44.8,Liver Cells,Folate,HER2,52.4,3.15e+14,Ethanol injection,7.2,290.1,Yes,0.4151
+LNP-00193,Liposomes,140.07,0.134,-0.6,62.5,86.9,40.0,149.43,61634.46,2.63,36.2,Lung Cells,Aptamer,HER2,37.4,9.79e+14,Microfluidic,7.3,250.6,Yes,0.1028
+LNP-00194,DNA Origami,50.84,0.094,13.9,71.6,77.2,17.1,53.22,8119.6,2.73,52.1,Lung Cells,Aptamer,HER2,59.4,9.12e+14,Sonication,7.3,285.1,Yes,0.3196
+LNP-00195,PLGA,237.72,0.152,-11.1,74.9,80.0,41.6,255.74,177528.78,3.44,13.9,Tumor Cells,Antibody,TLR,43.8,1.25e+14,Sonication,7.1,329.8,Yes,0.4971
+LNP-00196,Exosomes,184.45,0.237,5.8,55.2,70.7,24.2,206.31,106880.36,2.35,49.2,Immune Cells,Folate,EGFR,41.8,9.05e+14,Extrusion,7.3,291.4,Yes,0.362
+LNP-00197,DNA Origami,62.98,0.184,-3.9,73.3,83.7,22.4,68.79,12462.26,2.62,41.1,Neurons,GalNAc,EGFR,56.8,6.30e+14,Spontaneous emission,6.8,305.9,Yes,0.3326
+LNP-00198,Liposomes,136.06,0.273,4.3,62.5,74.9,30.4,154.65,58156.36,3.7,45.5,Liver Cells,PEG,LDLR,43.5,7.84e+14,Extrusion,7.0,270.8,Yes,0.3086
+LNP-00199,DNA Origami,95.32,0.125,1.7,71.3,89.6,24.1,101.27,28542.51,3.21,53.1,Tumor Cells,Transferrin,TLR,54.1,2.45e+14,Extrusion,7.1,338.3,Yes,0.0752
+LNP-00200,Exosomes,151.35,0.139,8.3,73.4,72.8,43.5,161.84,71968.16,3.66,42.5,Neurons,Folate,LDLR,41.4,6.43e+14,Spontaneous emission,7.4,263.2,Yes,0.218
+LNP-00201,DNA Origami,119.03,0.122,-0.4,83.6,72.8,11.7,126.28,44507.8,3.28,52.6,Immune Cells,GalNAc,ASGPR,73.8,8.22e+14,Spontaneous emission,7.2,294.9,Yes,0.0607
+LNP-00202,Liposomes,165.95,0.158,7.3,51.0,72.9,34.7,179.08,86513.44,1.86,55.4,Neurons,PEG,ASGPR,33.3,2.21e+14,Spontaneous emission,7.1,328.6,Yes,0.1698

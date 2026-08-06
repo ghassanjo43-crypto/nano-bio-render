@@ -1,0 +1,170 @@
+.wf {
+  display: grid;
+  grid-template-columns: 268px minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* ------------------------------------------------------------ progress rail */
+.wf__rail {
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-5));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.wf__rail > ol {
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-xs);
+}
+.wf__rail-item { position: relative; }
+.wf__rail-item + .wf__rail-item::before {
+  content: '';
+  position: absolute;
+  left: 27px; top: -6px; height: 6px; width: 2px;
+  background: var(--border);
+}
+.wf__rail-link {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease);
+}
+a.wf__rail-link:hover { background: var(--ink-50); text-decoration: none; }
+.wf__rail-marker {
+  flex: none;
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--ink-500);
+}
+.wf__rail-text { display: flex; flex-direction: column; min-width: 0; }
+.wf__rail-label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-700);
+}
+.wf__rail-sub {
+  font-size: var(--text-2xs);
+  color: var(--ink-500);
+  line-height: var(--leading-snug);
+  margin-top: 1px;
+}
+
+.wf__rail-item.is-current .wf__rail-link { background: var(--teal-50); }
+.wf__rail-item.is-current .wf__rail-marker {
+  background: var(--accent); border-color: var(--accent); color: var(--white);
+}
+.wf__rail-item.is-current .wf__rail-label { color: var(--ink-900); }
+
+.wf__rail-item.is-complete .wf__rail-marker {
+  background: var(--success-100); border-color: var(--success-border); color: var(--success-700);
+}
+.wf__rail-item.is-locked { opacity: 0.55; }
+.wf__rail-item.is-locked .wf__rail-link { cursor: not-allowed; }
+.wf__rail-item.is-locked .wf__rail-marker { border-style: dashed; }
+
+/* ---------------------------------------------------------------- summary */
+.wf__summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-xs);
+}
+.wf__summary-list { display: flex; flex-direction: column; gap: var(--space-2); margin: var(--space-3) 0; }
+.wf__summary-list > div { display: flex; flex-direction: column; }
+.wf__summary-list dt {
+  font-size: var(--text-2xs); color: var(--ink-500);
+  text-transform: uppercase; letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-bold);
+}
+.wf__summary-list dd {
+  margin: 0; font-size: var(--text-sm); font-weight: var(--weight-semibold);
+  color: var(--ink-900); line-height: var(--leading-snug);
+}
+.wf__summary-empty {
+  margin: var(--space-3) 0;
+  font-size: var(--text-xs); color: var(--ink-500);
+  line-height: var(--leading-snug);
+}
+.wf__summary-note {
+  margin-top: var(--space-3);
+  font-size: var(--text-2xs); color: var(--ink-400);
+  line-height: var(--leading-snug);
+}
+
+/* ---------------------------------------------------------------- content */
+.wf__content { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+
+.wf__actions {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-subtle);
+}
+.wf__actions-right { display: flex; align-items: center; gap: var(--space-3); }
+
+/* ------------------------------------------------------------- responsive */
+@media (max-width: 1180px) {
+  .wf { grid-template-columns: 1fr; }
+  .wf__rail { position: static; }
+  .wf__rail > ol { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-1); }
+  .wf__rail-item + .wf__rail-item::before { display: none; }
+  .wf__rail-link { flex-direction: column; align-items: center; text-align: center; }
+  .wf__rail-sub { display: none; }
+}
+@media (max-width: 760px) {
+  .wf__rail > ol { grid-template-columns: repeat(4, 1fr); }
+  .wf__rail-label { font-size: var(--text-2xs); }
+  .wf__actions { flex-direction: column-reverse; align-items: stretch; }
+  .wf__actions-right { flex-direction: column-reverse; }
+  .wf__actions .ds-btn { width: 100%; }
+}
+
+/* Mobile: the step rail scrolls inside itself rather than widening the page.
+ *
+ * The rail lists every workflow step horizontally. At 390px its natural width
+ * is 432px, and because nothing bounded it the overflow propagated up to the
+ * shell — so the whole application scrolled sideways on a phone, on the busiest
+ * screen it has.
+ *
+ * Scrolling the rail is the right containment: the steps are a sequence the
+ * user moves along, so a horizontally scrollable strip is a familiar shape,
+ * and the current step is scrolled into view by the browser when it receives
+ * focus. Wrapping them onto several lines instead would break the read-along-
+ * the-line ordering that makes the rail legible at a glance.
+ *
+ * Found by the navigation walkthrough at 390px. A fuller mobile pass over the
+ * workflow screens remains its own milestone; this bounds the overflow so the
+ * rest of the application is usable. */
+@media (max-width: 40rem) {
+  .wf {
+    min-width: 0;
+  }
+
+  .wf__rail {
+    /* `min-width: 0` on the scrolling element itself, not only on its
+       parent. A flex or grid item defaults to `min-width: auto`, which means
+       "never shrink below your content" — so `overflow-x: auto` had nothing
+       to scroll against and the intrinsic width propagated up the tree
+       regardless. This is the line that actually contains it. */
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    /* Momentum scrolling on iOS, and no vertical scrollbar appearing. */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+}

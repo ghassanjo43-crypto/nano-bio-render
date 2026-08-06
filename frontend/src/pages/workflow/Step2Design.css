@@ -1,0 +1,33 @@
+.s2__panel { padding-top: var(--space-5); }
+.s2__desc {
+  font-size: var(--text-sm); color: var(--ink-500);
+  margin-bottom: var(--space-5); line-height: var(--leading-snug);
+}
+.s2__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+.s2__field { min-width: 0; }
+.s2__field--wide { grid-column: 1 / -1; }
+.s2__tab-err {
+  display: inline-grid; place-items: center;
+  min-width: 17px; height: 17px; padding: 0 4px;
+  margin-left: var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--danger-600); color: var(--white);
+  font-size: 10px; font-weight: var(--weight-bold);
+}
+
+@media (max-width: 860px) {
+  .s2__fields { grid-template-columns: 1fr; }
+}
+
+/* Header actions on the design step: the 3D entry point sits alongside the
+   completeness badge so it is visible while the formulation is being edited. */
+.s2__headactions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}

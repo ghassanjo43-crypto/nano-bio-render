@@ -1,0 +1,175 @@
+/* ================================================ pharmacokinetic panel */
+.pk__caption {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+
+/* ------------------------------------------------------ headline values */
+.pk__headline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin: 0 0 var(--space-5);
+}
+.pk__headline > div {
+  padding: var(--space-3);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.pk__headline dt {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-500);
+}
+.pk__headline dd {
+  margin: var(--space-1) 0 2px;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--ink-900);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.pk__headline span {
+  display: block;
+  font-size: var(--text-2xs);
+  color: var(--ink-400);
+}
+
+/* A value that does not exist is styled as absent, never as a small number. */
+.pk__null {
+  font-style: italic;
+  font-weight: var(--weight-medium);
+  color: var(--ink-400);
+}
+
+/* ------------------------------------------------------------------ tabs */
+.pk__tabs { margin-bottom: var(--space-4); }
+.pk__tabbadge { margin-left: var(--space-1); }
+.pk__panel { margin-bottom: var(--space-5); }
+
+.pk__hint {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+.pk__note { font-size: var(--text-xs); color: var(--ink-500); }
+
+/* The full returned series: scrollable so the page never grows unbounded,
+   but every calculated point remains reachable. */
+.pk__datascroll {
+  max-height: 420px;
+  overflow-y: auto;
+  margin-top: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+/* ------------------------------------------------- not-produced section */
+.pk__notproduced {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.pk__notlist {
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-3);
+}
+.pk__notlist li {
+  display: grid;
+  gap: 2px;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--ink-200);
+}
+.pk__notname {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-700);
+}
+.pk__notreason {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}
+
+/* --------------------------------------------------------------- lists */
+.pk__subhead {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-600);
+}
+
+.pk__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-2);
+}
+.pk__list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2);
+  align-items: start;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+.pk__list li svg { margin-top: 3px; color: var(--ink-400); }
+
+/* ---------------------------------------------------------- provenance */
+.pk__provenance,
+.pk__limits {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.pk__prov {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+.pk__prov dt {
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--ink-500);
+}
+.pk__prov dd {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+  color: var(--ink-700);
+  overflow-wrap: anywhere;
+}
+.pk__prov code {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+}
+
+.pk__limitlist {
+  margin: 0;
+  padding-left: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+}

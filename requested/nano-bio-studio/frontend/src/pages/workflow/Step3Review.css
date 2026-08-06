@@ -1,0 +1,126 @@
+.s3__block + .s3__block {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-subtle);
+}
+.s3__headrow {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-3); flex-wrap: wrap;
+}
+.s3__head {
+  font-size: var(--text-2xs); font-weight: var(--weight-bold);
+  text-transform: uppercase; letter-spacing: var(--tracking-caps);
+  color: var(--ink-500); margin-bottom: var(--space-3);
+}
+.s3__headrow .s3__head { margin-bottom: 0; }
+
+.s3__context {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.s3__context > div {
+  padding: var(--space-4);
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.s3__context dt {
+  font-size: var(--text-2xs); color: var(--ink-500);
+  text-transform: uppercase; letter-spacing: var(--tracking-caps);
+  font-weight: var(--weight-bold);
+}
+.s3__context dd {
+  margin: var(--space-1) 0 0; font-size: var(--text-md);
+  font-weight: var(--weight-semibold); color: var(--ink-900);
+  line-height: var(--leading-snug);
+}
+
+.s3__note {
+  font-size: var(--text-xs); color: var(--ink-500);
+  margin: var(--space-3) 0 var(--space-4);
+}
+.s3__section + .s3__section { margin-top: var(--space-5); }
+.s3__section .eyebrow { margin-bottom: var(--space-2); }
+.s3__unit { color: var(--ink-400); font-weight: var(--weight-normal); }
+.s3__req {
+  margin-left: var(--space-2); font-size: var(--text-2xs);
+  color: var(--danger-700); font-weight: var(--weight-semibold);
+}
+.s3__row--default td { color: var(--ink-400); font-family: var(--font-sans); }
+
+.s3__runlist { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.s3__runlist li {
+  display: flex; gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.s3__runlist li.is-on { background: var(--success-100); border-color: var(--success-border); }
+.s3__runlist li.is-off { background: var(--ink-50); }
+.s3__runicon {
+  flex: none; width: 22px; height: 22px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--border-strong);
+  color: var(--ink-500); font-size: var(--text-xs);
+}
+.s3__runlist li.is-on .s3__runicon {
+  background: var(--success-600); border-color: var(--success-600); color: var(--white);
+}
+.s3__runtitle {
+  display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap;
+  font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--ink-900);
+}
+.s3__runbody {
+  margin-top: var(--space-1); font-size: var(--text-sm);
+  color: var(--ink-600); line-height: var(--leading-snug);
+}
+
+/* ------------------------------------- pharmacokinetic simulation inputs */
+.s3__pkgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* The symbol as it appears in the model's own equations, so a reader can map
+   the field to the published two-compartment formulation. */
+.s3__pksym {
+  display: inline-block;
+  margin-right: var(--space-1);
+  padding: 0 4px;
+  border-radius: var(--radius-sm);
+  background: var(--ink-100);
+  color: var(--ink-700);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+}
+
+@media (max-width: 860px) {
+  .s3__context { grid-template-columns: 1fr; }
+  .s3__pkgrid { grid-template-columns: 1fr; }
+}
+
+/* The legacy depot inputs, demoted behind a disclosure. They remain available
+   for reproducibility but are no longer the default way to configure a run. */
+.s3__legacy {
+  margin-top: var(--space-4, 16px);
+  padding: 12px 14px;
+  border: 1px dashed var(--border-subtle, rgba(148, 163, 184, 0.32));
+  border-radius: 8px;
+}
+
+.s3__legacy summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* The 3D builder entry point now lives in the Nanoparticle configuration
+   section header, alongside the completeness badge. */
+.s3__headactions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}

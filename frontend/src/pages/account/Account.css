@@ -1,0 +1,230 @@
+/**
+ * Account security screens.
+ *
+ * Two layouts from one stylesheet. `.account--standalone` centres a single
+ * card for the unauthenticated pages (activation, reset, forgotten password),
+ * which have no application shell around them; without the modifier the same
+ * classes lay out inside the shell.
+ *
+ * Mobile is the constraint that shaped this, not an afterthought. The session
+ * list is the screen somebody reaches on a phone — it is what you open when
+ * you are away from your desk and worried — so the session row is a column
+ * below 40rem, and its metadata list stacks rather than trying to hold three
+ * columns at 390px.
+ */
+
+.account {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: var(--space-6, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5, 1.25rem);
+}
+
+.account--standalone {
+  min-height: 100vh;
+  justify-content: center;
+  max-width: 34rem;
+}
+
+.account__card {
+  background: var(--surface-1, #fff);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-6, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4, 1rem);
+}
+
+.account__title {
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: 650;
+  margin: 0;
+  color: var(--text-strong, #0f172a);
+}
+
+.account__lead {
+  margin: 0;
+  color: var(--text-muted, #475569);
+  line-height: 1.55;
+}
+
+.account__hint {
+  margin: 0;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-muted, #64748b);
+  line-height: 1.5;
+}
+
+.account__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4, 1rem);
+}
+
+.account__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3, 0.75rem);
+  align-items: center;
+}
+
+.account__link {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  color: var(--accent-strong, #2563eb);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.account__policy {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--text-muted, #64748b);
+}
+
+.account__policy ul {
+  margin: var(--space-2, 0.5rem) 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+/* --- sessions ---------------------------------------------------------- */
+
+.account__sessions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+}
+
+.account__session {
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-4, 1rem);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3, 0.75rem);
+  align-items: center;
+}
+
+/* The current session is distinguished by a border and a badge, never by
+   colour alone — the badge carries a dot and text for the same reason. */
+.account__session--current {
+  border-color: var(--accent-strong, #2563eb);
+  background: var(--accent-subtle, #eff6ff);
+}
+
+.account__session-main {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.account__session-client {
+  font-weight: 600;
+  color: var(--text-strong, #0f172a);
+}
+
+.account__session-meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4, 1rem);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.account__session-meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.account__session-meta dt {
+  color: var(--text-muted, #64748b);
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.account__session-meta dd {
+  margin: 0;
+  color: var(--text-strong, #0f172a);
+}
+
+/* --- activity ----------------------------------------------------------- */
+
+.account__activity {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.account__activity th,
+.account__activity td {
+  text-align: left;
+  padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  border-bottom: 1px solid var(--border-subtle, #e2e8f0);
+}
+
+.account__activity th {
+  color: var(--text-muted, #64748b);
+  font-weight: 600;
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- mobile ------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .account {
+    padding: var(--space-4, 1rem);
+  }
+
+  .account__card {
+    padding: var(--space-4, 1rem);
+  }
+
+  /* One column. At 390px a two-column row squeezes the "Sign out" control to
+     the point where the touch target overlaps the metadata beside it. */
+  .account__session {
+    grid-template-columns: 1fr;
+  }
+
+  .account__session-meta {
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+
+  /* The activity table is the one thing here that genuinely cannot reflow, so
+     it scrolls inside its own box rather than widening the page. A horizontal
+     scrollbar on the body is how a security screen becomes unusable on a
+     phone. */
+  .account__activity {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Touch targets.
+ *
+ * The design system's medium button is 36px tall, which is fine with a mouse
+ * and below the 44px that both platform guidelines ask for on touch. These
+ * controls end somebody's session — a mis-tap is felt immediately by whoever
+ * was using it, and the rows sit close together.
+ *
+ * Scoped to this screen rather than changed globally: raising every button in
+ * the application is a design decision for the mobile milestone, not something
+ * to slip in from an account screen. */
+@media (max-width: 40rem) {
+  .account .ds-btn,
+  .account__sessions .ds-btn {
+    min-height: 44px;
+  }
+}

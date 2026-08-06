@@ -1,0 +1,167 @@
+/* ================================================ start / pathway cards */
+.sns__lead {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+
+.sns__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.sns__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.sns__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.sns__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.sns__title {
+  margin: 0;
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+  line-height: var(--leading-snug);
+}
+.sns__purpose {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.65;
+  color: var(--ink-600);
+}
+
+.sns__facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-1);
+}
+.sns__facts li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-2xs);
+  color: var(--ink-600);
+}
+.sns__facts svg { color: var(--success-600); flex: none; }
+
+.sns__journey {
+  font-size: var(--text-2xs);
+  color: var(--ink-500);
+}
+.sns__journey summary {
+  cursor: pointer;
+  font-weight: var(--weight-semibold);
+  color: var(--ink-600);
+}
+.sns__journey ol {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-4);
+  display: grid;
+  gap: 2px;
+  line-height: 1.6;
+}
+
+/* A limitation is part of the offer, not a footnote hidden away. */
+.sns__note {
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--surface-sunken);
+  border-left: 3px solid var(--warn-600);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-2xs);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+
+.sns__actions {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+/* -------------------------------------------------- research purposes */
+.sns__purposes {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+.sns__purposes li {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+/* An unavailable purpose is visibly inert, not merely greyed text. */
+.sns__purposes li.is-blocked {
+  background: var(--surface-sunken);
+  border-style: dashed;
+}
+
+.sns__purposehead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.sns__purposetitle {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--ink-900);
+}
+.sns__purposebody {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--ink-600);
+}
+.sns__purposemissing {
+  margin: 0;
+  font-size: var(--text-2xs);
+  line-height: 1.6;
+  color: var(--ink-500);
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--ink-200);
+}
+.sns__purposes button { justify-self: start; margin-top: var(--space-1); }
+
+@media (max-width: 720px) {
+  /* The three pathways stay full-width and readable rather than being
+     compressed into unreadable columns. */
+  .sns__grid, .sns__purposes { grid-template-columns: 1fr; }
+  .sns__card { padding: var(--space-4); }
+}

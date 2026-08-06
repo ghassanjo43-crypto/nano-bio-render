@@ -1,0 +1,85 @@
+/* ---------------------------------------------- concentration–time chart */
+.ct-chart {
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.ct-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.ct-chart__grid {
+  stroke: var(--ink-100);
+  stroke-width: 1;
+}
+
+.ct-chart__axis {
+  stroke: var(--ink-300);
+  stroke-width: 1;
+}
+
+.ct-chart__tick {
+  fill: var(--ink-500);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ct-chart__axislabel {
+  fill: var(--ink-600);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-caps);
+}
+
+.ct-chart__line {
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.ct-chart__line--a { stroke: var(--indigo-600); }
+.ct-chart__line--b { stroke: var(--teal-600); }
+
+.ct-chart__marker { stroke: var(--surface); stroke-width: 1.5; }
+.ct-chart__marker--a { fill: var(--indigo-700); }
+.ct-chart__marker--b { fill: var(--teal-600); }
+
+.ct-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+  color: var(--ink-600);
+}
+.ct-chart__legend li { display: flex; align-items: center; gap: var(--space-1); }
+
+.ct-chart__swatch {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  flex: none;
+}
+.ct-chart__swatch--a { background: var(--indigo-600); }
+.ct-chart__swatch--b { background: var(--teal-600); }
+.ct-chart__swatch--marker {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--indigo-700);
+}
+
+.ct-chart__caption {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--ink-500);
+}

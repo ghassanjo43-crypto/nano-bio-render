@@ -1,0 +1,16 @@
+exp_experiment_id,exp_experiment_name,exp_scientist,lipid_ionizable_name,lipid_helper_name,lipid_sterol_name,lipid_peg_name,ratio_ionizable,ratio_helper,ratio_sterol,ratio_peg,payload_type,payload_name,process_method,process_temperature_c,process_pH,char_particle_size_nm,char_pdi,char_encapsulation_efficiency_pct,assay_type,char_toxicity_score,char_uptake_pct,qc_status,intended_target
+EXP-2026-0001,mRNA vaccine formulation,Dr. Smith,ionizable-LNP-A,DSPC,Cholesterol,DMG-PEG,50,10,38.5,1.5,mRNA,COVID-19 mRNA,microfluidic,25,7.0,100.0,0.12,92.0,cell_viability,2.1,85.0,pass,immune_cells
+EXP-2026-0002,Cancer drug delivery,Dr. Johnson,ionizable-LNP-B,DSPE,Cholesterol,PEG-lipid,45,15,37,3,siRNA,HER2 siRNA,ethanol_injection,22,6.5,95.0,0.14,88.0,cell_uptake,1.8,78.0,pass,cancer_cells
+EXP-2026-0003,Gene therapy vector,Dr. Wong,ionizable-LNP-C,DOPE,Cholesterol,DMG-PEG,40,20,38,2,DNA,LDLR gene,microfluidic,25,7.2,98.0,0.16,90.0,transfection,2.5,82.0,pass,liver_cells
+EXP-2026-0004,Protein encapsulation,Dr. Chen,ionizable-LNP-D,DSPC,Cholesterol,PEG-lipid,50,10,38,2,protein,Lysozyme,sonication,20,6.8,102.0,0.18,85.0,cell_viability,2.2,75.0,warning,fibroblasts
+EXP-2026-0005,High throughput screen A,Dr. Brown,ionizable-LNP-A,DSPC,Cholesterol,DMG-PEG,48,12,37,3,mRNA,Luciferase mRNA,microfluidic,25,7.0,99.0,0.13,91.0,cell_uptake,1.9,83.0,pass,fibroblasts
+EXP-2026-0006,High throughput screen B,Dr. Smith,ionizable-LNP-B,DOPE,Cholesterol,PEG-lipid,42,18,38,2,siRNA,KRAS siRNA,ethanol_injection,23,6.5,96.0,0.15,87.0,transfection,2.3,79.0,pass,pancreatic_cancer
+EXP-2026-0007,Stability test round 1,Dr. Johnson,ionizable-LNP-C,DSPC,Cholesterol,DMG-PEG,50,10,38,2,mRNA,IFNb mRNA,microfluidic,25,7.1,97.0,0.14,89.0,cell_viability,2.0,81.0,pass,immune_cells
+EXP-2026-0008,Optimization trial 1,Dr. Wong,ionizable-LNP-D,DOPE,Cholesterol,PEG-lipid,45,15,37,3,siRNA,PD-L1 siRNA,sonication,22,6.8,100.0,0.17,86.0,cell_uptake,2.4,77.0,warning,cancer_cells
+EXP-2026-0009,Optimization trial 2,Dr. Chen,ionizable-LNP-A,DSPE,Cholesterol,DMG-PEG,50,10,38,2,DNA,PCSK9 gene,microfluidic,25,7.0,101.0,0.12,93.0,transfection,1.7,86.0,pass,liver_cells
+EXP-2026-0010,Batch validation,Dr. Brown,ionizable-LNP-B,DSPC,Cholesterol,PEG-lipid,48,12,37,3,protein,GFP protein,ethanol_injection,24,6.5,98.0,0.16,88.0,cell_viability,2.2,80.0,pass,hela_cells
+EXP-2026-0011,Formulation screening,Dr. Smith,ionizable-LNP-C,DOPE,Cholesterol,DMG-PEG,42,18,38,2,mRNA,TNFa mRNA,microfluidic,25,7.2,99.0,0.14,90.0,cell_uptake,2.1,82.0,pass,fibroblasts
+EXP-2026-0012,Lead optimization,Dr. Johnson,ionizable-LNP-D,DSPE,Cholesterol,PEG-lipid,50,10,38,2,siRNA,Huntingtin siRNA,sonication,23,6.8,97.0,0.15,87.0,transfection,2.3,78.0,pass,neurons
+EXP-2026-0013,Stability test round 2,Dr. Wong,ionizable-LNP-A,DSPC,Cholesterol,DMG-PEG,45,15,37,3,DNA,IL-12 gene,microfluidic,25,7.0,100.0,0.13,92.0,cell_viability,1.9,84.0,pass,immune_cells
+EXP-2026-0014,Scale-up study,Dr. Chen,ionizable-LNP-B,DOPE,Cholesterol,PEG-lipid,50,10,38,2,mRNA,Checkpoint mRNA,ethanol_injection,22,6.5,96.0,0.16,88.0,cell_uptake,2.2,79.0,warning,cancer_cells
+EXP-2026-0015,IND enabling batch,Dr. Brown,ionizable-LNP-C,DSPE,Cholesterol,DMG-PEG,48,12,37,3,siRNA,Survivin siRNA,microfluidic,25,7.1,102.0,0.14,91.0,transfection,2.0,83.0,pass,tumor_cells

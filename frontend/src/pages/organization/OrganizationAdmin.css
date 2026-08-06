@@ -1,0 +1,226 @@
+/**
+ * Organization administration.
+ *
+ * The one visual rule with meaning behind it: organization authority and
+ * scientific eligibility never share a style. They are different badges with
+ * different tones AND different text labels, because a reader who takes
+ * "Administrator" for "can approve" has misread the access model, and colour
+ * alone would leave that reading available to anybody who cannot distinguish
+ * the two tones — or who printed the page.
+ */
+
+.org-admin {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5, 1.25rem);
+}
+
+.org-admin--narrow {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.org-admin__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5, 1.25rem);
+}
+
+/* --- the authority legend ------------------------------------------------ */
+
+.org-legend {
+  border: 1px solid var(--color-border, #d8dee6);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-4, 1rem);
+  background: var(--color-surface-subtle, #f7f9fb);
+}
+
+.org-legend__lead {
+  margin: 0 0 var(--space-3, 0.75rem);
+}
+
+.org-legend__grid {
+  display: grid;
+  gap: var(--space-3, 0.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 0;
+}
+
+.org-legend__grid dt {
+  margin-bottom: var(--space-1, 0.25rem);
+}
+
+.org-legend__grid dd {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* --- role badges --------------------------------------------------------- */
+
+.org-role-badge {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: flex-start;
+}
+
+/* The kind, in words. Not decoration: it is what stops "Administrator" being
+   read as a superset of "Approver". */
+.org-role-badge__kind {
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #5b6875);
+}
+
+/* --- tables and rows ----------------------------------------------------- */
+
+.org-admin__person {
+  font-weight: 600;
+}
+
+.org-admin__row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2, 0.5rem);
+  align-items: flex-end;
+}
+
+.org-admin__muted {
+  color: var(--color-text-muted, #5b6875);
+  font-size: 0.8125rem;
+}
+
+.org-admin__facts {
+  display: grid;
+  gap: var(--space-3, 0.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin: 0 0 var(--space-4, 1rem);
+}
+
+.org-admin__facts dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted, #5b6875);
+}
+
+.org-admin__facts dd {
+  margin: 0.25rem 0 0;
+}
+
+.org-admin__filters {
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+}
+
+.org-admin__check {
+  display: block;
+  margin: var(--space-3, 0.75rem) 0;
+  font-size: 0.9375rem;
+}
+
+/* The one-time invitation link. Wrapped rather than truncated: a link the
+   administrator cannot read in full is a link they cannot pass on, and it
+   cannot be recovered afterwards. */
+.org-admin__link code {
+  display: block;
+  word-break: break-all;
+  padding: var(--space-2, 0.5rem);
+  background: var(--color-surface-subtle, #f7f9fb);
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.8125rem;
+}
+
+.org-admin__pending {
+  border-color: var(--color-warn-border, #e0b04a);
+}
+
+/* --- account administration ------------------------------------------- */
+
+.org-panel__accounts {
+  list-style: none;
+  margin: var(--space-4, 1rem) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+}
+
+.org-panel__account {
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-4, 1rem);
+}
+
+.org-panel__account-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.org-panel__account-head > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  flex-wrap: wrap;
+}
+
+.org-panel__account-body {
+  margin-top: var(--space-4, 1rem);
+  padding-top: var(--space-4, 1rem);
+  border-top: 1px solid var(--border-subtle, #e2e8f0);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+}
+
+.org-panel__account-meta {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--space-3, 0.75rem);
+  font-size: var(--text-sm, 0.875rem);
+}
+
+.org-panel__account-meta dt {
+  color: var(--text-muted, #64748b);
+  font-size: var(--text-xs, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.org-panel__account-meta dd {
+  margin: 0;
+  color: var(--text-strong, #0f172a);
+}
+
+.org-panel__account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3, 0.75rem);
+}
+
+/* The one-time link. Wrapped rather than truncated: a link an administrator
+   must copy exactly is useless with an ellipsis in the middle of it, and this
+   is the only time it will ever be shown. */
+.org-panel__link-value {
+  display: block;
+  margin: var(--space-3, 0.75rem) 0;
+  padding: var(--space-3, 0.75rem);
+  background: var(--surface-2, #f8fafc);
+  border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: var(--radius-sm, 6px);
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: var(--text-sm, 0.8125rem);
+  word-break: break-all;
+  user-select: all;
+}
+
+@media (max-width: 40rem) {
+  .org-panel__account-actions > * {
+    flex: 1 1 100%;
+  }
+}
