@@ -22,7 +22,7 @@
 import { Suspense, useEffect, useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import {
-  Environment, Html, Instance, Instances, Line, OrbitControls,
+  Html, Instance, Instances, Line, OrbitControls,
   PerspectiveCamera,
 } from '@react-three/drei';
 import * as THREE from 'three';
@@ -521,7 +521,7 @@ function SceneContents({ model, layers, state, detail, budget, seed,
       <directionalLight position={[4, 6, 4]} intensity={1.15} />
       <directionalLight position={[-5, -2, -3]} intensity={0.4} />
       <Suspense fallback={null}>
-        <Environment preset="studio" />
+        <ambientLight intensity={0.75} />
       </Suspense>
 
       <Spinner state={state}>
