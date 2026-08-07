@@ -18,6 +18,8 @@ const ADMIN: UserProfile = {
 };
 const RESEARCHER: UserProfile = { ...ADMIN, id: 2, username: 'rlee',
   full_name: 'R. Lee', role: 'researcher', email: null };
+const VIEWER: UserProfile = { ...ADMIN, id: 3, username: 'viewer',
+  full_name: 'V. Iewer', role: 'viewer', email: null };
 
 function json(body: unknown, status = 200): Response {
   return new Response(JSON.stringify(body), {
@@ -349,6 +351,22 @@ describe('role-based access control', () => {
     installFetch({ profile: RESEARCHER });
     renderApp('/admin');
     expect(await screen.findByTestId('unauthorized')).toBeInTheDocument();
+  });
+
+  it.each([
+    ['admin', ADMIN],
+    ['researcher', RESEARCHER],
+    ['viewer', VIEWER],
+  ] as const)('renders HelpPage directly for the %s role', async (_role, profile) => {
+    installFetch({ profile });
+    renderApp('/help');
+
+    const helpPage = await screen.findByTestId('help-page');
+    expect(helpPage).toBeInTheDocument();
+    expect(screen.queryByTestId('module-placeholder')).not.toBeInTheDocument();
+    expect(helpPage).not.toHaveTextContent(/Not yet operational/i);
+    expect(helpPage).not.toHaveTextContent(/This module cannot run/i);
+    expect(helpPage).not.toHaveTextContent(/No data is shown here/i);
   });
 });
 

@@ -422,11 +422,10 @@ export const NAV_GROUPS: readonly NavGroup[] = [
         label: 'Help & Tutorial',
         path: '/help',
         icon: 'info',
-        status: 'not_operational',
+        status: 'operational',
         summary:
-          'Guided onboarding. The Demo Workspace currently covers the same '
-          + 'need with genuinely connected engines.',
-        relatedKey: 'demo',
+          'Platform guidance, workflow orientation, security help and links '
+          + 'to the operational documentation available to every signed-in role.',
       },
     ],
   },

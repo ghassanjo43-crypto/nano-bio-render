@@ -62,6 +62,7 @@ import AcceptInvitationPage from './pages/organization/AcceptInvitationPage';
 import SetPasswordPage from './pages/account/SetPasswordPage';
 import ForgotPasswordPage from './pages/account/ForgotPasswordPage';
 import AccountSecurityPage from './pages/account/AccountSecurityPage';
+import HelpPage from './pages/HelpPage';
 import { WorkflowProvider } from './workflow/WorkflowContext';
 import PathwayFrame from './workflow/PathwayFrame';
 
@@ -202,7 +203,9 @@ export default function App() {
                  </PathwayFrame>} />
           <Route path="/ai-co-designer" element={placeholderFor('ai-co-designer')} />
           <Route path="/ml-training" element={placeholderFor('ml-training')} />
-          <Route path="/help" element={placeholderFor('help')} />
+          {/* Documentation is not a scientific engine. It renders directly
+              and must never inherit module-availability warnings. */}
+          <Route path="/help" element={<HelpPage />} />
           <Route path="/settings" element={placeholderFor('settings')} />
           {/* Organization administration. Reachable by every member: the
               screens show what the caller may see, and every control they
